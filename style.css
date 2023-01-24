@@ -63,28 +63,28 @@ div#cart {
 }
 
 /* FOOTER */
-footer {
+body > footer {
     background: yellow;
 }
 
-.buy{
+#cart footer, #cart header{
     background: blue;
     margin: 0 10px ;
 }
 
-.buy#haut{
+#cart header{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.grande{
+#cart div{
     background: rgb(1, 255, 77);
     margin: 0 10px;
     height: 100%;
 }
 
-.buy#bas{
+#cart footer{
     margin-bottom: 10px;
     padding: 10px;
 }
