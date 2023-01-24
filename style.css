@@ -10,6 +10,12 @@ h1 {
 h2 {
     background: pink;
     margin: 0;
+    text-align: center;
+    padding: 15px;
+}
+
+h3{
+    margin: 15px;
 }
 
 /* NAV */
@@ -51,10 +57,34 @@ div#products div.watches {
 
 /* div CART */
 div#cart {
+    display: flex;
+    flex-direction: column;
     background: red;
 }
 
 /* FOOTER */
 footer {
     background: yellow;
+}
+
+.buy{
+    background: blue;
+    margin: 0 10px ;
+}
+
+.buy#haut{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.grande{
+    background: rgb(1, 255, 77);
+    margin: 0 10px;
+    height: 100%;
+}
+
+.buy#bas{
+    margin-bottom: 10px;
+    padding: 10px;
 }
