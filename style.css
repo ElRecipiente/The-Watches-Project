@@ -1,0 +1,47 @@
+html , body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    background: pink;
+    margin: 0;
+}
+
+/* NAV */
+nav {
+    background: purple;
+    height: 15vh;
+}
+
+/* MAIN */
+main {
+    height: 70vh;
+    width: 90%;
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 10% 80%;
+    gap: 30px;
+}
+
+/* div PRODUCTS */
+div#products {
+    background: blue;
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+/* div CART */
+div#cart {
+    background: red;
+}
+
+/* FOOTER */
+footer {
+    background: yellow;
+}
