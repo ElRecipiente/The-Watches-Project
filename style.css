@@ -26,7 +26,7 @@ nav {
 
 /* MAIN */
 main {
-    height: 70vh;
+    height: 80vh;
     width: 90%;
     margin: 2em auto;
     display: grid;
@@ -37,9 +37,22 @@ main {
 
 /* div PRODUCTS */
 div#products {
-    background: blue;
+    background-image: url(images/black-graphite-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     grid-column: 1 / 2;
     grid-row: 2;
+    width: 100%;
+}
+
+div#products div.watches {
+    background: white;
+    opacity: 70%;
+    width: 25%;
+    margin: 2em 1em;
 }
 
 /* div CART */
