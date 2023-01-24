@@ -26,18 +26,17 @@ nav {
 
 /* MAIN */
 main {
-    height: 80vh;
+    /* height: 80vh; */
     width: 90%;
     margin: 2em auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 10% 80%;
+    grid-template-rows: 10% 90%;
     gap: 30px;
 }
 
 /* div PRODUCTS */
 div#products {
-    background-image: url(images/black-graphite-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -49,11 +48,51 @@ div#products {
 }
 
 div#products div.watches {
-    background: white;
-    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 1em;
+    opacity: 90%;
     width: 25%;
     margin: 2em 1em;
+    transition: 1s;
 }
+
+div#products div.watches:hover {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px white;
+    scale: 103%;
+}
+
+/* div#products div.watches:hover img {
+    filter: blur(1px);
+} */
+
+div#products div.watches img {
+    transition: 1s;
+}
+
+div#products div.watches img {
+    width: 70%;
+}
+
+div#products div.watches div {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+}
+
+div#products div.watches div p {
+    visibility: hidden;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* div#products div.watches:hover div p{
+    visibility: visible;
+} */
 
 /* div CART */
 div#cart {
