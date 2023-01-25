@@ -132,9 +132,8 @@ input::-webkit-inner-spin-button {
 /* FOOTER */
 body > footer {
     display: flex;
-    justify-content: space-around;
-    margin-left: 220px;
-    width: 100%;
+    justify-content: flex-end;
+    margin-right: 14em;
   }
 
   .logo {
