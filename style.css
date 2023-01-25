@@ -53,11 +53,11 @@ nav {
 /* MAIN */
 main {
     /* height: 80vh; */
-    width: 90%;
+    width: 80%;
     margin: 2em auto;
     display: grid;
-    grid-template-columns: 2fr 0.6fr;
-    grid-template-rows: 10% 90%;
+    grid-template-columns: 2fr 0.7fr;
+    grid-template-rows: 7vh 60vh;
     gap: 30px;
 }
 
@@ -82,7 +82,8 @@ div#products div.watches {
     border-radius: 1em;
     opacity: 90%;
     width: 25%;
-    margin: 2em 1em;
+    height: fit-content;
+    margin: 1em 1em;
     transition: 1s;
     color: white;
     text-shadow: 2px 2px 4px black;
@@ -121,15 +122,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* div CART */
-div#cart {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    backdrop-filter: blur(5px);
-    border-radius: 1em;
-}
-
 /* FOOTER */
 body > footer {
     display: flex;
@@ -153,6 +145,9 @@ div#cart {
   flex-direction: column;
   /* box-shadow: 0 0 10px rgb(129, 129, 129); */
   padding: 15px;
+  height: 80%;
+  background: white;
+  border-radius: 1em;
 }
 
 #cart footer,
@@ -204,15 +199,22 @@ div#cart {
     justify-content: space-around;
 }
 
+#cart .grande ul li .delete {
+    position: relative;
+    font-size:14px;
+    margin-top: 10px;
+}
+
 #cart .grande {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow-y: scroll;
 }
 
 #cart footer {
   margin-bottom: 0;
-  padding: 10px;
+    padding: 10px;
   border-bottom: 2px solid black;
 }
 
@@ -223,3 +225,10 @@ div#cart {
     margin: 15px 0;
 }
 
+#cart .grande input {
+    text-align: center;
+}
+
+#cart .grande input:hover {
+    color: rgb(0, 0, 0);
+}
