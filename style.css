@@ -63,7 +63,7 @@ main {
     width: 80%;
     margin: 2em auto;
     display: grid;
-    grid-template-columns: 2fr 0.7fr;
+    grid-template-columns: 2fr 0.9fr;
     grid-template-rows: 7vh 60vh;
     gap: 30px;
 }
@@ -132,15 +132,13 @@ input::-webkit-inner-spin-button {
 /* FOOTER */
 body > footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    margin-left: 220px;
     width: 100%;
-    bottom: 0px;
-    height: 35px;
   }
 
   .logo {
-    height: 20px;
+    height: 25px;
     margin: 5px 12px;
   }
 
@@ -196,7 +194,7 @@ div#cart {
     display: flex;
     align-items: center;
     margin: 10px 0;
-    font-size: 20px;
+    font-size: 15px;
     background: rgb(207, 189, 189);
     width: 100%;
     height: 50px;
@@ -206,10 +204,10 @@ div#cart {
     justify-content: space-around;
 }
 
-#cart .grande ul li .delete {
-    position: relative;
-    font-size:14px;
-    margin-top: 10px;
+#cart .grande ul li .btn img {
+    width: 15px;
+    height: 20px;
+
 }
 
 #cart .grande {
