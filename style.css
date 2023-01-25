@@ -10,14 +10,6 @@ html , body {
     font-weight: bolder;
 }
 
-h1 {
-    /*font-family: 'Great Vibes', cursive;*/
-    font-family: 'Amatic SC', cursive;
-    margin : 20px 0 0 20px;
-    font-size: 3.5em;
-
-}
-
 h2 {
     box-shadow: 0 0 10px rgb(129, 129, 129);
     font-family: 'Nunito', sans-serif;
@@ -34,25 +26,39 @@ h3{
     margin: 15px;
 }
 
-h5{
-    font-family: 'Amatic SC', cursive;
-    margin: 0 0 0 65px;
-}
-
 /* NAV */
 nav {
     height: 15vh;
-    /*background-image: url(images/banner_watch_shop2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;*/
-    flex-direction: column;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h1,h5 {
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+h1{
+    font-size: 6em;
+    margin: 5px 0 0 0;
+}
+
+h5{
+    font-size: 1.3em;
+    margin: 0 auto;
+}
+
+#nav_logo{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
 /* MAIN */
 main {
-    /* height: 80vh; */
     width: 90%;
     margin: 2em auto;
     display: grid;
