@@ -150,6 +150,7 @@ div#cart {
   flex-direction: column;
   /* box-shadow: 0 0 10px rgb(129, 129, 129); */
   padding: 15px;
+  height: 50vh;
 }
 
 #cart footer,
@@ -201,10 +202,17 @@ div#cart {
     justify-content: space-around;
 }
 
+#cart .grande ul li .delete {
+    position: relative;
+    font-size:14px;
+    margin-top: 10px;
+}
+
 #cart .grande {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow-y: scroll;
 }
 
 #cart footer {
@@ -220,3 +228,10 @@ div#cart {
     margin: 15px 0;
 }
 
+#cart .grande input {
+    text-align: center;
+}
+
+#cart .grande input:hover {
+    color: rgb(0, 0, 0);
+}
