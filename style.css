@@ -163,6 +163,10 @@ div#cart {
     background: whitesmoke;
 }
 
+#cart .payement img {
+    width: 10%;
+}
+
 #cart header {
     display: flex;
     align-items: center;
