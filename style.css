@@ -87,7 +87,6 @@ div#products div.watches {
     background:rgba(0, 0, 0, 0.1);
     opacity: 90%;
     width: 25%;
-    height: fit-content;
     margin: 1em 1em;
     padding: 1em;
     transition: 1s;
