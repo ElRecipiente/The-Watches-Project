@@ -1,38 +1,98 @@
 
 // availableProducts est l'ensemble des articles disponible à la vente
 // Ils doivent être affichés dans la section, sous forme d'articles
+
+// const img = document.querySelector("img")
+
 const availableProducts = [
     {
-        name: "Product 1",
-        description: "This is the first product",
-        price: 55
+        name: "Rolexx",
+        image: {
+            src: "montre1.png",
+            alt: "A super Rolexx watch that's awesome and that you should buy"
+        },
+        price: 299
     },
     {
-        name: "Product 2",
-        description: "This is the second product",
-        price: 25
+        name: "Patekk Filippe",
+        image: {
+            src: "montre2.png",
+            alt: "A super Patekk Filippe watch that's awesome and that you should buy"
+        },
+        price: 249
     },
     {
-        name: "Product 3",
-        description: "This is the third product",
-        price: 15
+        name: "Pas de Cartier",
+        image: {
+            src: "montre3.png",
+            alt: "A super Pas de Cartier watch that's awesome and that you should buy"
+        },
+        price: 149
+    },
+    {
+        name: "Alpha",
+        image: {
+            src: "montre4.png",
+            alt: "A super Alpha watch that's awesome and that you should buy"
+        },
+        price: 150
+    },
+    {
+        name: "Louis Biddon",
+        image: {
+            src: "montre5.png",
+            alt: "A super Louis Biddon watch that's awesome and that you should buy"
+        },
+        price: 399
+    },
+    {
+        name: "Vélux",
+        image: {
+            src: "montre6.png",
+            alt: "A super Vélux watch that's awesome and that you should buy"
+        },
+        price: 999
     }
 ];
 
 // Une fonction displayAvailableProducts() qui est appelée une fois au chargement de la page, qui remplit la section avec les différents articles dispo dans notre variable availableProducts .
 // La méthode .push() des Array permet d’ajouter un élément à la fin du tableau.
-function displayAvailableProducts() {
+const products = document.querySelector("div#products")
 
+function displayAvailableProducts() {
+    for (i = 0; i < availableProducts.length; i++) {
+        const divWatches = document.createElement("div");
+        divWatches.classList.add("watches");
+
+        divWatches.innerHTML = `
+        <img src="images/${availableProducts[i].image.src}" alt="${availableProducts[i].image.alt}">
+        <span>${availableProducts[i].name}</span>
+        <div>
+            <p>${availableProducts[i].price} $</p>
+            <button>-</button>
+            <input type="number" min="1" max="99" />
+            <button>+</button>
+            <button onclick="addProductToCart(${i})">ADD</button>
+        </div>`;
+        products.append(divWatches)
+    }
 };
+
+
 
 // cart est un tableau dynamique qui contient les éléments que l'on veut acheter
 // L'ensemble de ces produits seront affiché dans le cart
 let cart = [];
 
 // addProductToCart() qui ajoute un article dans le tableau cart. ⚠️ Cette fonction ne touche pas du tout à l’affichage de votre page HTML, elle ne devrait faire que 2 lignes
-function addProductToCart() {
 
-};
+function addProductToCart(i) {
+    cart.push(availableProducts[i]);
+}
+displayAvailableProducts()
+addProductToCart(0)
+
+console.log(cart[0])
 
 // displayCart() qui affiche le contenu du panier dans le aside (sous forme de liste).
 function displayCart() {
