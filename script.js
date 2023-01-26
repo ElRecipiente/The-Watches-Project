@@ -117,7 +117,7 @@ function removeWatchFromCart(thisWatch) {
     cart[thisWatch].number = 1;
     cart.splice(thisWatch, 1)
     displayCart();
-
+    //this code must stay
     console.log(cart);
 }
 
