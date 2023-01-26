@@ -146,7 +146,7 @@ function displayCart() {
         </select>
     </span>
     <div>
-        <button class="btn" onclick="removeWatchFomCart(${i})">
+        <button class="btn" onclick="removeWatchFromCart(${i})">
             <img src="images/delete.png" alt="icone">
         </button>
     </div>`;
