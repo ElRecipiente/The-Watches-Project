@@ -101,7 +101,7 @@ function indexInCart(watch) {
 
 function addProductToCart(avPIndex) {
     let watch = availableProducts[avPIndex];
-    let index = indexInCart(watch)
+    let index = indexInCart(watch);
     if (index != -1) {
         cart[index].number += 1;
     }
@@ -117,11 +117,12 @@ function removeWatchFromCart(thisWatch) {
     cart[thisWatch].number = 1;
     cart.splice(thisWatch, 1)
     displayCart();
-
+    //this code must stay
     console.log(cart);
 }
 
 displayAvailableProducts()
+
 
 // displayCart() qui affiche le contenu du panier dans le aside (sous forme de liste).
 const ulCart = document.querySelector(".grande ul");
@@ -145,7 +146,7 @@ function displayCart() {
         </select>
     </span>
     <div>
-        <button class="btn" onclick="removeWatchFromCart(${i})">
+        <button class="btn" onclick="removeWatchFomCart(${i})">
             <img src="images/delete.png" alt="icone">
         </button>
     </div>`;
