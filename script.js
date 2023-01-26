@@ -113,8 +113,15 @@ function addProductToCart(avPIndex) {
 
 }
 
-displayAvailableProducts()
+function removeWatchFromCart(thisWatch) {
+    cart[thisWatch].number = 1;
+    cart.splice(thisWatch, 1)
+    displayCart();
 
+    console.log(cart);
+}
+
+displayAvailableProducts()
 
 // displayCart() qui affiche le contenu du panier dans le aside (sous forme de liste).
 const ulCart = document.querySelector(".grande ul");
@@ -138,16 +145,10 @@ function displayCart() {
         </select>
     </span>
     <div>
-        <button class="btn" onclick="delete()">
+        <button class="btn" onclick="removeWatchFromCart(${i})">
             <img src="images/delete.png" alt="icone">
         </button>
     </div>`;
         ulCart.append(watchInCart);
     }
 };
-
-function deleteWatch() {
-    cart.splice(i, 1)
-
-    displayCart();
-}
