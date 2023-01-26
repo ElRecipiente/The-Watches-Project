@@ -131,7 +131,7 @@ function displayCart() {
     for (i = 0; i < cart.length; i++) {
         let watchInCart = document.createElement("li");
         watchInCart.innerHTML = ` <div>
-        <img src="images/${cart[i].image.src}" alt="${cart[i].image.alt}">
+        <span><img class="montre-cart" src="images/${cart[i].image.src}" alt="${cart[i].image.alt}"> ${cart[i].name}</span>
     </div>
     <p>${cart[i].price} $</p>
     <span>
