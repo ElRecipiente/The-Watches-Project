@@ -11,7 +11,8 @@ const availableProducts = [
             src: "montre1.png",
             alt: "A super Rolexx watch that's awesome and that you should buy"
         },
-        price: 299
+        price: 299,
+        number: 1
     },
     {
         name: "Patekk Filippe",
@@ -19,7 +20,8 @@ const availableProducts = [
             src: "montre2.png",
             alt: "A super Patekk Filippe watch that's awesome and that you should buy"
         },
-        price: 249
+        price: 249,
+        number: 1
     },
     {
         name: "Pas de Cartier",
@@ -27,7 +29,8 @@ const availableProducts = [
             src: "montre3.png",
             alt: "A super Pas de Cartier watch that's awesome and that you should buy"
         },
-        price: 149
+        price: 149,
+        number: 1
     },
     {
         name: "Alpha",
@@ -35,7 +38,8 @@ const availableProducts = [
             src: "montre4.png",
             alt: "A super Alpha watch that's awesome and that you should buy"
         },
-        price: 150
+        price: 150,
+        number: 1
     },
     {
         name: "Louis Biddon",
@@ -43,7 +47,8 @@ const availableProducts = [
             src: "montre5.png",
             alt: "A super Louis Biddon watch that's awesome and that you should buy"
         },
-        price: 399
+        price: 399,
+        number: 1
     },
     {
         name: "Vélux",
@@ -51,7 +56,8 @@ const availableProducts = [
             src: "montre6.png",
             alt: "A super Vélux watch that's awesome and that you should buy"
         },
-        price: 999
+        price: 999,
+        number: 1
     }
 ];
 
@@ -69,9 +75,6 @@ function displayAvailableProducts() {
         <span>${availableProducts[i].name}</span>
         <div>
             <p>${availableProducts[i].price} $</p>
-            <button>-</button>
-            <input type="number" min="1" max="99" />
-            <button>+</button>
             <button onclick="addProductToCart(${i})">ADD</button>
         </div>`;
         products.append(divWatches)
@@ -86,16 +89,65 @@ let cart = [];
 
 // addProductToCart() qui ajoute un article dans le tableau cart. ⚠️ Cette fonction ne touche pas du tout à l’affichage de votre page HTML, elle ne devrait faire que 2 lignes
 
-function addProductToCart(i) {
-    cart.push(availableProducts[i]);
+function indexInCart(watch) {
+    for (i = 0; i < cart.length; i++) {
+        if (cart[i].name == watch.name) {
+            return i
+        }
+    }
+    return -1
 }
-displayAvailableProducts()
-addProductToCart(0)
 
-console.log(cart[0])
+
+function addProductToCart(avPIndex) {
+    let watch = availableProducts[avPIndex];
+    let index = indexInCart(watch)
+    if (index != -1) {
+        cart[index].number += 1;
+    }
+    else {
+        cart.push(watch);
+    }
+    console.log(cart);
+    displayCart();
+
+}
+
+displayAvailableProducts()
+
 
 // displayCart() qui affiche le contenu du panier dans le aside (sous forme de liste).
-function displayCart() {
+const ulCart = document.querySelector(".grande ul");
 
+function displayCart() {
+    ulCart.innerHTML = ""
+    for (i = 0; i < cart.length; i++) {
+        let watchInCart = document.createElement("li");
+        watchInCart.innerHTML = ` <div>
+        <img src="images/${cart[i].image.src}" alt="${cart[i].image.alt}">
+    </div>
+    <p>${cart[i].price} $</p>
+    <span>
+        <select name="number" id="number_select" onclick="()">
+            <option value="">${cart[i].number}</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </span>
+    <div>
+        <button class="btn" onclick="delete()">
+            <img src="images/delete.png" alt="icone">
+        </button>
+    </div>`;
+        ulCart.append(watchInCart);
+    }
 };
 
+function deleteWatch() {
+    cart.splice(i, 1)
+
+    displayCart();
+}
