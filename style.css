@@ -69,7 +69,7 @@ main {
 
 /* div PRODUCTS */
 div#products {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -92,11 +92,11 @@ div#products div.watches {
     transition: 1s;
     color: white;
     text-shadow: 2px 2px 4px black;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 div#products div.watches:hover {
     box-shadow: 0 0 10px rgba(128, 128, 128);
-    scale: 110%;
 }
 
 div#products div.watches img {
@@ -219,10 +219,6 @@ div#cart {
 #cart .grande ul li .btn img {
     width: 15px;
     height: 20px;
-}
-
-#cart .grande ul li span input {
-    size: "2" min="1" max="5";
 }
 
 #cart .grande ul li .btn{
