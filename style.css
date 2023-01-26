@@ -193,8 +193,12 @@ div#cart {
     margin-left: 50px;
 }
 
-#cart ul li .montre-cart {
-    margin-left: 10px;
+
+#cart ul li span {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+    align-items: center;
 }
 
 #cart .grande ul {
@@ -227,10 +231,9 @@ div#cart {
     background: transparent;
 }
 
-#cart .grande ul li div img,
-#cart .grande ul li div button img {
-    width: 50px;
-    height: 50px;
+#cart .grande ul li div img{
+    width: 30px;
+    height: 30px;
 }
 
 #cart .grande {
@@ -254,10 +257,6 @@ div#cart {
     margin: 15px 0;
 }
 
-#cart .grande input {
+#cart .grande select {
     text-align: center;
-}
-
-#cart .grande input:hover {
-    color: rgb(0, 0, 0);
 }
