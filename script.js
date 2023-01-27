@@ -139,11 +139,11 @@ function displayCart() {
     <span>
         <select name="number" id="number_select" onclick="()">
             <option value="">${cart[i].number}</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <option value="1" onclick="setNumberValue(1)">1</option>
+            <option value="2" onclick="setNumberValue(2)">2</option>
+            <option value="3" onclick="setNumberValue(3)">3</option>
+            <option value="4" onclick="setNumberValue(4)">4</option>
+            <option value="5" onclick="setNumberValue(5)">5</option>
         </select>
     </span>
     <div>
@@ -153,7 +153,26 @@ function displayCart() {
     </div>`;
 
         ulCart.append(watchInCart);
-    }let total = 0;
 
+    }
+    totalPrice(cart);
+};
 
+function totalPrice(i) {
+
+    let totalInCart = document.getElementById("total_in_cart");
+    let total = 0
+    for (i = 0; i < cart.length; i++) {
+        total += cart[i].price * cart[i].number
+    }
+    console.log(total);
+    totalInCart.textContent = `${total} $`
+}
+
+totalPrice(cart);
+
+function setNumberValue(v) {
+    cart.number = v;
+    console.log(cart.number);
+    totalPrice(cart);
 }
