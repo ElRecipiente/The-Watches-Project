@@ -11,7 +11,7 @@ const availableProducts = [
             src: "montre1.png",
             alt: "A super Rolexx watch that's awesome and that you should buy"
         },
-        price: 299,
+        price: 2999,
         number: 1
     },
     {
@@ -20,7 +20,7 @@ const availableProducts = [
             src: "montre2.png",
             alt: "A super Patekk Filippe watch that's awesome and that you should buy"
         },
-        price: 249,
+        price: 2499,
         number: 1
     },
     {
@@ -29,7 +29,7 @@ const availableProducts = [
             src: "montre3.png",
             alt: "A super Pas de Cartier watch that's awesome and that you should buy"
         },
-        price: 149,
+        price: 1499,
         number: 1
     },
     {
@@ -38,7 +38,7 @@ const availableProducts = [
             src: "montre4.png",
             alt: "A super Alpha watch that's awesome and that you should buy"
         },
-        price: 150,
+        price: 1599,
         number: 1
     },
     {
@@ -47,7 +47,7 @@ const availableProducts = [
             src: "montre5.png",
             alt: "A super Louis Biddon watch that's awesome and that you should buy"
         },
-        price: 399,
+        price: 3999,
         number: 1
     },
     {
@@ -56,7 +56,7 @@ const availableProducts = [
             src: "montre6.png",
             alt: "A super Vélux watch that's awesome and that you should buy"
         },
-        price: 999,
+        price: 9999,
         number: 1
     }
 ];
@@ -75,7 +75,7 @@ function displayAvailableProducts() {
         <span>${availableProducts[i].name}</span>
         <div>
             <p>${availableProducts[i].price} $</p>
-            <button onclick="addProductToCart(${i})">ADD</button>
+            <button onclick="addProductToCart(${i})">Add to Cart</button>
         </div>`;
         products.append(divWatches)
     }
@@ -132,7 +132,7 @@ function displayCart() {
     for (i = 0; i < cart.length; i++) {
         let watchInCart = document.createElement("li");
         watchInCart.innerHTML = ` <div>
-        <span><img class="montre-cart" src="images/${cart[i].image.src}" alt="${cart[i].image.alt}"> ${cart[i].name}</span>
+        <span><img src="images/${cart[i].image.src}" alt="${cart[i].image.alt}"> ${cart[i].name}</span>
     </div>
     <p>${cart[i].price} $</p>
     <span>
