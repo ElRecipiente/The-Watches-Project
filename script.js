@@ -129,6 +129,7 @@ const ulCart = document.querySelector(".grande ul");
 
 function displayCart() {
     ulCart.innerHTML = ""
+
     for (i = 0; i < cart.length; i++) {
         let watchInCart = document.createElement("li");
         watchInCart.innerHTML = ` <div>
@@ -150,6 +151,24 @@ function displayCart() {
             <img src="images/delete.png" alt="icone">
         </button>
     </div>`;
+
         ulCart.append(watchInCart);
+        totalPrice();
     }
 };
+
+function totalPrice(i) {
+
+    let totalInCart = document.getElementById('#total_in_cart');
+    totalP.innerHTML = "";
+
+    let totalForWatch = ${ cart[i].price } * ${ cart[i].number }   //prix total par li(ou prix total par exemplaire de montre)
+
+    const initialValue = 0;
+    const SumWithInitialValue = cart.reduce((accumulator, currentValue) => accumulator + currentValue, // total du cart = somme des li
+        initialValue);
+
+    console.log(SumWithInitialValue);
+
+
+}
