@@ -153,22 +153,7 @@ function displayCart() {
     </div>`;
 
         ulCart.append(watchInCart);
-        totalPrice();
-    }
-};
-
-function totalPrice(i) {
-
-    let totalInCart = document.getElementById('#total_in_cart');
-    totalP.innerHTML = "";
-
-    let totalForWatch = ${ cart[i].price } * ${ cart[i].number }   //prix total par li(ou prix total par exemplaire de montre)
-
-    const initialValue = 0;
-    const SumWithInitialValue = cart.reduce((accumulator, currentValue) => accumulator + currentValue, // total du cart = somme des li
-        initialValue);
-
-    console.log(SumWithInitialValue);
+    }let total = 0;
 
 
 }
