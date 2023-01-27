@@ -130,20 +130,20 @@ const ulCart = document.querySelector(".grande ul");
 function displayCart() {
     ulCart.innerHTML = ""
 
-    for (i = 0; i < cart.length; i++) {
+    for (let i = 0; i < cart.length; i++) {
         let watchInCart = document.createElement("li");
         watchInCart.innerHTML = ` <div>
         <span><img src="images/${cart[i].image.src}" alt="${cart[i].image.alt}"> ${cart[i].name}</span>
     </div>
     <p>${cart[i].price} $</p>
     <span>
-        <select name="number" id="number_select" onclick="()">
+        <select name="number" id="numberSelect">
             <option value="">${cart[i].number}</option>
-            <option value="1" onclick="setNumberValue(1)">1</option>
-            <option value="2" onclick="setNumberValue(2)">2</option>
-            <option value="3" onclick="setNumberValue(3)">3</option>
-            <option value="4" onclick="setNumberValue(4)">4</option>
-            <option value="5" onclick="setNumberValue(5)">5</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
         </select>
     </span>
     <div>
@@ -153,7 +153,12 @@ function displayCart() {
     </div>`;
 
         ulCart.append(watchInCart);
-
+        let selectElement = document.getElementById("numberSelect");
+        selectElement.addEventListener("change", () => {
+            cart[i].number = selectElement.value;
+            console.log("ça marche !");
+            totalPrice(cart);
+        })
     }
     totalPrice(cart);
 };
@@ -162,7 +167,7 @@ function totalPrice(i) {
 
     let totalInCart = document.getElementById("total_in_cart");
     let total = 0
-    for (i = 0; i < cart.length; i++) {
+    for (let i = 0; i < cart.length; i++) {
         total += cart[i].price * cart[i].number
     }
     console.log(total);
@@ -171,8 +176,14 @@ function totalPrice(i) {
 
 totalPrice(cart);
 
-function setNumberValue(v) {
-    cart.number = v;
-    console.log(cart.number);
-    totalPrice(cart);
-}
+// let selectElement = document.getElementById("number_select")
+
+// selectElement.addEventListener("change", (i) => {
+//     cart[i].number = selectElement.value;
+//     console.log("ça marche !");
+//     totalPrice(cart);
+// })
+
+// function setNumberValue(position, value) {
+    
+// }
