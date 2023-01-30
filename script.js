@@ -132,18 +132,13 @@ function displayCart() {
 
     for (let i = 0; i < cart.length; i++) {
         let watchInCart = document.createElement("li");
-        watchInCart.innerHTML = ` <div>
+        watchInCart.innerHTML = `<div>
         <span><img src="images/${cart[i].image.src}" alt="${cart[i].image.alt}"> ${cart[i].name}</span>
     </div>
     <p>${cart[i].price} $</p>
     <span>
-        <select name="number" id="numberSelect">
-            <option value="">${cart[i].number}</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+        <select name="number">
+
         </select>
     </span>
     <div>
@@ -151,14 +146,23 @@ function displayCart() {
             <img src="images/delete.png" alt="icone">
         </button>
     </div>`;
-
+        
         ulCart.append(watchInCart);
-        let selectElement = document.getElementById("numberSelect");
-        selectElement.addEventListener("change", () => {
-            cart[i].number = selectElement.value;
+        let selectElement = document.querySelectorAll("select");
+        selectElement[i].addEventListener("change", () => {
+            cart[i].number = parseInt(selectElement[i].value, 10);
             console.log("ça marche !");
             totalPrice(cart);
         })
+
+        for (let j = 1; j < 10; j++) {
+            let anOption = document.createElement("option")
+            anOption.textContent = `${j}`
+            if (j == cart[i].number) {
+                anOption.selected = true;
+            }
+            selectElement[i].append(anOption);
+        }
     }
     totalPrice(cart);
 };
