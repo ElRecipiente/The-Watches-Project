@@ -53,6 +53,11 @@ h5{
 a {
     text-decoration: none;
     color: white;
+    transition: 0.4s;
+}
+
+a:hover {
+    text-shadow: 0 0 4px white;
 }
 
 #nav_logo{
@@ -94,7 +99,7 @@ div#products div.watches {
     width: 25%;
     margin: 1em 1em;
     padding: 1em;
-    transition: 1s;
+    transition: 0.4s;
     color: white;
     text-shadow: 1px 1px 4px black;
 }
@@ -105,7 +110,7 @@ div#products div.watches:hover {
 
 div#products div.watches img {
     width: 30%;
-    transition: 1s;
+    transition: 0.4s;
     padding: 1em;
 }
 
@@ -132,7 +137,7 @@ div#products div.watches div button {
     color: white;
     background: transparent;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.4s;
 }
 
 div#products div.watches div button:hover {
@@ -186,7 +191,7 @@ body > footer {
     color: white;
     background: transparent;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.4s;
     justify-self: flex-end;
 }
 
