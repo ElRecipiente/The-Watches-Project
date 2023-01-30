@@ -27,6 +27,7 @@ h3{
 
 /* NAV */
 nav {
+    width: 100%;
     height: 15vh;
     display: flex;
     flex-direction: row;
@@ -50,6 +51,16 @@ h5{
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+a:hover {
+    text-shadow: 0 0 4px white;
+}
+
 #nav_logo{
     display:flex;
     flex-direction: row;
@@ -62,7 +73,7 @@ main {
     width: 80%;
     margin: 2em auto;
     display: grid;
-    grid-template-columns: 2fr 0.9fr;
+    grid-template-columns: 2fr 0.7fr;
     grid-template-rows: 7vh 60vh;
     gap: 30px;
 }
@@ -89,7 +100,7 @@ div#products div.watches {
     width: 25%;
     margin: 1em 1em;
     padding: 1em;
-    transition: 1s;
+    transition: 0.4s;
     color: white;
     text-shadow: 1px 1px 4px black;
 }
@@ -100,7 +111,7 @@ div#products div.watches:hover {
 
 div#products div.watches img {
     width: 30%;
-    transition: 1s;
+    transition: 0.4s;
     padding: 1em;
 }
 
@@ -127,7 +138,7 @@ div#products div.watches div button {
     color: white;
     background: transparent;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.4s;
 }
 
 div#products div.watches div button:hover {
@@ -147,6 +158,50 @@ body > footer {
     margin: 5px 12px;
   }
 
+/*********************************************************/
+/********************* TYPICAL WATCH *********************/
+/*********************************************************/
+
+.mainDiv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    margin: 5em auto;
+    padding: 1em;
+    background:rgba(0, 0, 0, 0.2);
+    opacity: 90%;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.mainDiv img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.mainDiv div {
+    width: 50%;
+    padding-left: 2em;
+}
+
+.mainDiv button {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    justify-self: flex-end;
+}
+
+.mainDiv button:hover {
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 4px white;
+}
+
+
 /***********/
 /****CART***/
 /***********/
@@ -155,11 +210,15 @@ div#cart {
   flex-direction: column;
   /* box-shadow: 0 0 10px rgb(129, 129, 129); */
   padding: 15px;
-  height: 80%;
+  height: 500px;
   background: rgb(255, 255, 255, 0.9);
   color: white;
   text-shadow: 1px 1px 4px black;
-  box-shadow: 0 0 4px rgba(128, 128, 128);;
+  box-shadow: 0 0 4px rgba(128, 128, 128);
+}
+
+.cart_container{
+  display: none;  
 }
 
 #cart footer,
@@ -318,45 +377,96 @@ h2,h3 {
 }
 
 /* responsive for smartphones _______________________________________________________*/
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 678px) {
     html , body {
-    overflow-y: scroll;
-}  
-    main {
-            width: 95%;
-            margin: 2.5em auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-     }  
-
-    div#products {
-    width: 100%;
-    } 
-
-    div#products div.watches {
-        width: 70%;
-    }
+    background-attachment: fixed;
+    
+    }   
 
     nav {
-        height: 20vh;
-        flex-direction: column;
-        justify-content: space-between;
+        height: 12vh;
+        flex-direction: row;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background-color: white;
     }
 
     #nav_logo{
         display:flex;
         flex-direction: row;
         justify-content: center;
-        margin-bottom: 20px;
+        align-items: center;
+        margin-right: 10px;
     }
+
+    #brandname{
+        position: absolute;
+        margin-left: 15px;
+    }
+
+    #hack{
+        position: relative;
+    }
+    
+
+    h1,h5 {
+        font-family: 'Amatic SC', cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }   
+    
+    h1{
+        font-size: 2.5em;
+        margin: 2px 0 0 0;
+    }
+
+    h5{
+        font-size: 0.8em;
+    }
+
+    .logo {
+        height: 20px;
+        margin: 5px 8px;
+      }
+
+     #cart_logo:hover > #products{
+        
+            display: block;
+            position: absolute;
+            
+      }
 
     h2,h3 {
         font-size: 1.2em;
         background-color: white;
         opacity: 70%;
+        width: 92.5%;
     }
+    main {
+            width: 95%;
+            margin: 1.5em auto;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+     }  
+
+    div#products {
+    width: 100%;
+    margin-bottom: 20%;
+    } 
+
+    div#products div.watches {
+        width: 35%;
+    }
+
+    div#cart {
+        margin-bottom: 10%;
+      }
+
     }
 
 
