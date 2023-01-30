@@ -234,6 +234,7 @@ div#cart {
     margin-left: 30px;
     border: none;
     background: transparent;
+    cursor: pointer;
 }
 
 #cart .grande ul li div img{
@@ -356,4 +357,88 @@ h2,h3 {
         background-color: white;
         opacity: 70%;
     }
+    }
+
+
+    /***************************************/
+    /***************************************/
+    /******************Home*****************/
+    /***************************************/
+    /***************************************/
+
+    #home{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 80%;
+    }
+
+    #home button,
+    #home p{
+        display: flex;
+        z-index: 10;
+        margin: 20px 10px;
+    }
+
+    #home p{
+        font-size: 30px;
+        color: white;
+    }
+
+    #home button {
+        padding: 15px 5px;
+        width: 10vh;
+        font-size: 30px;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+
+    #home button:hover{
+        font-size: 40px;
+        background-color: transparent;
+        color: white;
+        border-radius: 20px;
+        width: 12vh;
+    }
+
+    .slider {
+        position: absolute;
+        width: 100vw;
+        overflow: hidden;
+        height: 90%;
+    }
+
+    .slides{
+        animation: glisse 15s infinite;
+        display: flex;
+    }
+    .slide img {
+        width: 2500px;
+        height: 5000px;
+    }
+
+    @keyframes glisse{
+        0% {
+            transform: translateX(0);
+        }
+        10% {
+            transform: translateX(-100vw);
+        }
+        24% {
+            transform: translateX(-200vw);
+        }
+        35% {
+            transform: translateX(-300vw);
+        }
+        55% {
+            transform: translateX(-400vw);
+        }
+        75% {
+            transform: translateX(-500vw);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
