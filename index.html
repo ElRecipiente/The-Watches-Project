@@ -23,24 +23,27 @@
 
 <body>
     <nav>
-        <div></div>
+        <div id="hack"></div>
         <div id="brandname">
             <h1>The Watches</h1>
             <h5>Swiss made &reg;</h5>
         </div>
 
         <div id="nav_logo">
-            <a href=""><img class="logo" src="images/home_logo.png" alt="home logo"></a>
+            <a href="index.html"><img class="logo" src="images/home_logo.png" alt="home logo"></a>
             <a href=""><img class="logo" src="images/account_logo.png" alt="account logo"></a>
-            <a href=""><img class="logo" src="images/cart_logo.png" alt="cart logo"></a>
+            <img class="logo" id="cart_logo" src="images/cart_logo.png" alt="cart logo">
         </div>
     </nav>
 
     <main>
+        <div>
         <h2>Our products</h2>
         <div id="products">
         </div>
-        <h2>Cart</h2>
+        </div>
+        <div class="cart_container">
+            <h2 id="go_to_cart">Cart</h2>
         <div id="cart">
             <header>
                 <div>Name</div>
@@ -60,6 +63,7 @@
                 <img src="images/paypal_icon_2.png" alt="cb_icon">
             </div>
         </div>
+    </div>
     </main>
 
     <footer>

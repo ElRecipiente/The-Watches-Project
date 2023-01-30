@@ -185,5 +185,21 @@ totalPrice(cart);
 // })
 
 // function setNumberValue(position, value) {
-    
+
 // }
+
+
+let showCartLogo = document.querySelector("#cart_logo");
+
+showCartLogo.addEventListener("click", function () {
+    let showCart = document.querySelector(".cart_container");
+    if (showCart.style.display === "none") {
+        showCart.style.display = "block";
+    }
+    else {
+        showCart.style.display = "none";
+    }
+
+});
+
+
