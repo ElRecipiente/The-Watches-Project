@@ -50,6 +50,11 @@ h5{
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 #nav_logo{
     display:flex;
     flex-direction: row;
@@ -146,6 +151,50 @@ body > footer {
     height: 25px;
     margin: 5px 12px;
   }
+
+/*********************************************************/
+/********************* TYPICAL WATCH *********************/
+/*********************************************************/
+
+.mainDiv {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    margin: 5em auto;
+    padding: 1em;
+    background:rgba(0, 0, 0, 0.2);
+    opacity: 90%;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.mainDiv img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.mainDiv div {
+    width: 50%;
+    padding-left: 2em;
+}
+
+.mainDiv button {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: 1s;
+    justify-self: flex-end;
+}
+
+.mainDiv button:hover {
+    text-shadow: 0 0 4px white;
+    box-shadow: 0 0 4px white;
+}
+
 
 /***********/
 /****CART***/

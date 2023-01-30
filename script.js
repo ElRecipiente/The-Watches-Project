@@ -72,7 +72,7 @@ function displayAvailableProducts() {
 
         divWatches.innerHTML = `
         <img src="images/${availableProducts[i].image.src}" alt="${availableProducts[i].image.alt}">
-        <span>${availableProducts[i].name}</span>
+        <a href="article${i+1}.html">${availableProducts[i].name}</a>
         <div>
             <p>${availableProducts[i].price} $</p>
             <button onclick="addProductToCart(${i})">Add to Cart</button>
