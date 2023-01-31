@@ -180,20 +180,9 @@ function totalPrice(i) {
 
 totalPrice(cart);
 
-// let selectElement = document.getElementById("number_select")
-
-// selectElement.addEventListener("change", (i) => {
-//     cart[i].number = selectElement.value;
-//     console.log("ça marche !");
-//     totalPrice(cart);
-// })
-
-// function setNumberValue(position, value) {
-
-// }
-
-
 let showCartLogo = document.querySelector("#cart_logo");
+
+////////////////////////////////////////////////////////////////////////////
 
 showCartLogo.addEventListener("click", function () {
     let showCart = document.querySelector(".cart_container");
