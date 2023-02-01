@@ -127,6 +127,10 @@ div#products div.watches div *{
     height: fit-content;
 }
 
+div#products div.watches a {
+    font-size: 1.1em;
+}
+
 div#products div.watches div p {
     width: 30%;
     text-align: center;
@@ -134,11 +138,12 @@ div#products div.watches div p {
 }
 
 div#products div.watches div button {
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     background: transparent;
     cursor: pointer;
     transition: 0.4s;
+    font-size: 1em;
 }
 
 div#products div.watches div button:hover {
@@ -177,9 +182,8 @@ body > footer {
     text-shadow: 1px 1px 4px black;
 }
 
-.mainDiv img {
-    width: fit-content;
-    height: fit-content;
+.mainDiv h3 {
+    font-size: 1.5em;
 }
 
 .mainDiv div {
@@ -187,13 +191,23 @@ body > footer {
     padding-left: 2em;
 }
 
+.mainDiv #currentPhoto img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.mainDiv #currentPhoto {
+    width: 20%;
+}
+
 .mainDiv button {
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     background: transparent;
     cursor: pointer;
     transition: 0.4s;
     justify-self: flex-end;
+    font-size: 1em;
 }
 
 .mainDiv button:hover {
@@ -201,6 +215,79 @@ body > footer {
     box-shadow: 0 0 4px white;
 }
 
+.mainDiv .watchesPhotos {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 5%;
+    padding: 0 1em;
+}
+
+.mainDiv .watchesPhotos img {
+    width: 100%;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.mainDiv .watchesPhotos img:hover {
+    scale: 1.1;
+}
+
+/* MODAL CONTAINER */
+
+div.containerModal {
+    visibility: hidden;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    transition: visibility 0.4s;
+}
+
+div.containerModal.active {
+    visibility: visible;
+}
+
+div.overlay {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333333d3;
+    transition: opacity 0.2s 0.2s ease-out;
+}
+
+div.containerModal.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+div.modal {
+    opacity: 0;
+    position: absolute;
+    width: fit-content;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
+
+div.modal img {
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+div.containerModal.active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
 
 /***********/
 /****CART***/

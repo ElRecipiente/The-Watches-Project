@@ -72,10 +72,10 @@ function displayAvailableProducts() {
 
         divWatches.innerHTML = `
         <img src="images/${availableProducts[i].image.src}" alt="${availableProducts[i].image.alt}">
-        <a href="article${i+1}.html">${availableProducts[i].name}</a>
+        <a href="article${i + 1}.html">${availableProducts[i].name}</a>
         <div>
             <p>${availableProducts[i].price} $</p>
-            <button onclick="addProductToCart(${i})">Add to Cart</button>
+            <button onclick="addProductToCart(${i})">Ajouter au panier</button>
         </div>`;
         products.append(divWatches)
     }
@@ -146,7 +146,7 @@ function displayCart() {
             <img src="images/delete.png" alt="icone">
         </button>
     </div>`;
-        
+
         ulCart.append(watchInCart);
         let selectElement = document.querySelectorAll("select");
         selectElement[i].addEventListener("change", () => {
@@ -175,25 +175,14 @@ function totalPrice(i) {
         total += cart[i].price * cart[i].number
     }
     console.log(total);
-    totalInCart.textContent = `${total} $`
+    totalInCart.textContent = `Total : ${total} $`
 }
 
 totalPrice(cart);
 
-// let selectElement = document.getElementById("number_select")
-
-// selectElement.addEventListener("change", (i) => {
-//     cart[i].number = selectElement.value;
-//     console.log("ça marche !");
-//     totalPrice(cart);
-// })
-
-// function setNumberValue(position, value) {
-
-// }
-
-
 let showCartLogo = document.querySelector("#cart_logo");
+
+////////////////////////////////////////////////////////////////////////////
 
 showCartLogo.addEventListener("click", function () {
     let showCart = document.querySelector(".cart_container");
