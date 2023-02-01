@@ -24,7 +24,7 @@ const availableProducts = [
         number: 1
     },
     {
-        name: "Pas de Cartier",
+        name: "Pas&nbsp;de Cartier",
         image: {
             src: "montre3.png",
             alt: "A super Pas de Cartier watch that's awesome and that you should buy"
@@ -133,19 +133,17 @@ function displayCart() {
     for (let i = 0; i < cart.length; i++) {
         let watchInCart = document.createElement("li");
         watchInCart.innerHTML = `<div>
-        <span><img src="images/${cart[i].image.src}" alt="${cart[i].image.alt}"> ${cart[i].name}</span>
+        <div><img src="images/${cart[i].image.src}" alt="${cart[i].image.alt}"><p>${cart[i].name}</p></div>
     </div>
-    <p>${cart[i].price} $</p>
+    <p>${cart[i].price}&nbsp;$</p>
     <span>
         <select name="number">
 
         </select>
     </span>
-    <div>
         <button class="btn" onclick="removeWatchFromCart(${i})">
             <img src="images/delete.png" alt="icone">
-        </button>
-    </div>`;
+        </button>`;
 
         ulCart.append(watchInCart);
         let selectElement = document.querySelectorAll("select");
