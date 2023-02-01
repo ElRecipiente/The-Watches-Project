@@ -437,7 +437,7 @@ body > footer {
     margin: auto;
   }
 }
- 
+
 /* responsive for tablets _______________________________________________________*/
 @media screen and (max-width: 778px) {
 main {
@@ -465,6 +465,7 @@ h2,h3 {
     font-size: 1.2em;
 }
 }
+
 
 /* responsive for smartphones _______________________________________________________*/
 @media screen and (max-width: 678px) {
@@ -555,6 +556,39 @@ h2,h3 {
 
     div#cart {
         margin-bottom: 10%;
+      }
+/********MEDIA TYPE********/
+      div.mainDiv {
+        flex-flow: column;
+        height: fit-content;
+        text-align: justify;
+        width: 90%;
+        margin: 0 auto;
+      }
+    
+      div.mainDiv div {
+        padding: 1em;
+        margin: 0;
+        width: 100%;
+      }
+    
+      div.mainDiv div h3 {
+        background: transparent;
+        width: fit-content;
+        text-align: center;
+      }
+    
+      div.mainDiv #currentPhoto {
+        width: 50%;
+      }
+    
+      div.mainDiv .watchesPhotos {
+        flex-flow: row;
+        width: 20%;
+      }
+    
+      div.mainDiv .watchesPhotos img {
+        margin: 0 1em;
       }
 
     }
