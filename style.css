@@ -498,19 +498,11 @@ h2,h3 {
     }
 
     #home button {
-        padding: 15px 5px;
-        width: 10vh;
-        font-size: 30px;
+        padding: 5px 5px;
+        width: 50px;
+        font-size: 15px;
         border-radius: 20px;
         background-color: transparent;
-    }
-
-    #home button:hover{
-        font-size: 40px;
-        background-color: transparent;
-        color: white;
-        border-radius: 20px;
-        width: 12vh;
     }
 
     .slider {
@@ -534,19 +526,19 @@ h2,h3 {
             transform: translateX(0);
         }
         10% {
-            transform: translateX(-100vw);
+            transform: translateX(0);
         }
-        24% {
-            transform: translateX(-200vw);
+        33% {
+            transform: translateX(-2000px);
         }
-        35% {
-            transform: translateX(-300vw);
+        43% {
+            transform: translateX(-2000px);
         }
-        55% {
-            transform: translateX(-400vw);
+        66% {
+            transform: translateX(-4000px);
         }
-        75% {
-            transform: translateX(-500vw);
+        76% {
+            transform: translateX(-4000px);
         }
         100% {
             transform: translateX(0);
