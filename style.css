@@ -110,7 +110,7 @@ div#products div.watches:hover {
 }
 
 div#products div.watches img {
-    width: 30%;
+    width: 40%;
     transition: 0.4s;
     padding: 1em;
 }
@@ -295,8 +295,7 @@ div.containerModal.active .modal {
 div#cart {
   display: flex;
   flex-direction: column;
-  /* box-shadow: 0 0 10px rgb(129, 129, 129); */
-  padding: 15px;
+  padding: 1em;
   height: 500px;
   background: rgb(255, 255, 255, 0.9);
   color: white;
@@ -328,28 +327,38 @@ div#cart {
     text-align: center;
     list-style-type: none;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-#cart header > * {
-    flex: 1;
+#cart header span {
+    padding: 0 1em;
 }
 
-#cart .grande li > * {
-    flex: 1;
-    display: flex;
-}
-#cart .grande ul li p{
+#cart .grande ul li>p{
     margin: 0;
-    margin-left: 50px;
+    width: fit-content;
+}
+
+#cart ul li div {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cart ul li div div {
+    display: flex;
+    align-items: center;
 }
 
 
-#cart ul li span {
-    display: flex;
-    margin-left: 20px;
-    margin-top: 5px;
-    align-items: center;
+#cart .grande ul li div div p{
+    flex-grow: 1;
+}
+
+#cart ul li img {
+    padding: 1em;
+    width: 100%;
 }
 
 #cart .grande ul {
@@ -360,32 +369,25 @@ div#cart {
 #cart .grande ul li {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 1em 0;
     font-size: 15px;
     background: rgb(207, 189, 189);
-    width: 100%;
-    height: 50px;
+    justify-content: space-between;
     text-align: center;
     list-style-type: none;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 #cart .grande ul li .btn img {
-    width: 15px;
-    height: 20px;
+    width: 100%;
+    padding: 0;
 }
 
 #cart .grande ul li .btn{
-    margin-left: 30px;
     border: none;
     background: transparent;
     cursor: pointer;
-}
-
-#cart .grande ul li div img{
-    width: 20px;
-    height: 30px;
+    width: 10%;
 }
 
 #cart .grande {
@@ -394,6 +396,11 @@ div#cart {
   height: 100%;
   overflow-y: scroll;
   background:rgba(0, 0, 0, 0.1);
+}
+
+#cart .grande ul li select{
+    text-align: center;
+    margin-left: 3em;
 }
 
 #cart footer {
@@ -413,10 +420,6 @@ div#cart {
     justify-content: space-around;
     align-items: center;
     margin: 15px 0;
-}
-
-#cart .grande select {
-    text-align: center;
 }
 
 /* responsive for smaller screens________________________________________________________________________________*/
