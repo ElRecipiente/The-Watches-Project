@@ -127,6 +127,10 @@ div#products div.watches div *{
     height: fit-content;
 }
 
+div#products div.watches a {
+    font-size: 1.1em;
+}
+
 div#products div.watches div p {
     width: 30%;
     text-align: center;
