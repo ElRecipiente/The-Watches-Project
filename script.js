@@ -193,4 +193,8 @@ showCartLogo.addEventListener("click", function () {
 
 });
 
-
+function showInput() {
+    let thisInput = document.querySelector("input")
+    thisInput.classList.toggle("active")
+    console.log("clic")
+}
