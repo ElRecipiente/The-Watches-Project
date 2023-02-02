@@ -496,6 +496,16 @@ div#cart {
         z-index: 10;
         margin: 20px 10px;
     }
+    
+    section#home{
+        height: 84%;;
+      }
+
+      #home p{
+        font-size: 1.3em;
+        width: 90%;
+        padding: 0 auto;
+    }
 
     #home p{
         font-size: 30px;
@@ -592,6 +602,10 @@ div#cart {
         visibility: visible;
     }
 
+    .form-example {
+        margin: 50px 0;
+    }
+
     article .panier .qcm{
         display: flex;
         justify-content: center;
@@ -684,6 +698,30 @@ section#home {
 #home img{
     height: 600px;
 }
+
+
+@keyframes glisse{
+    0% {
+        transform: translateX(-800px);
+    }
+    10% {
+        transform: translateX(-800px);
+    }
+    33% {
+        transform: translateX(-2650px);
+    }
+    43% {
+        transform: translateX(-2650px);
+    }
+    66% {
+        transform: translateX(-5000px);
+    }
+    76% {
+        transform: translateX(-5000px);
+    }
+    100% {
+        transform: translateX(-800px);
+    }
 }
 
 
@@ -835,17 +873,3 @@ section#home {
     }
 
     }
-
-
-      section#home{
-        height: 84%;;
-      }
-
-      #home p{
-        font-size: 1.3em;
-        width: 90%;
-        padding: 0 auto;
-    }
-
-
-    
