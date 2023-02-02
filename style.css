@@ -496,6 +496,16 @@ div#cart {
         z-index: 10;
         margin: 20px 10px;
     }
+    
+    section#home{
+        height: 84%;;
+      }
+
+      #home p{
+        font-size: 1.3em;
+        width: 90%;
+        padding: 0 auto;
+    }
 
     #home p{
         font-size: 30px;
@@ -583,9 +593,23 @@ div#cart {
     }
 
     .panier .form-panier{
+        display: flex;
+        flex-direction: column;
+        margin: 5px 5px;
+        font-size: 25px;
         width: fit-content;
         background-color: teal;
         visibility: visible;
+    }
+
+    .form-example {
+        margin: 50px 0;
+    }
+
+    article .panier .qcm{
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
     
     .panier img{
@@ -599,16 +623,6 @@ div#cart {
         justify-content: space-between;
         align-items: center;
     }
-
-    #panier-spe .buy{
-        border: 5px solid blue;
-        width: fit-content;
-    }
-
-    #panier-spe .buy button{
-        cursor: pointer;
-    }
-
     
 
     
@@ -644,12 +658,17 @@ body > footer {
 
 /* responsive for tablets _______________________________________________________*/
 @media screen and (max-width: 778px) {
+html , body {
+        background-attachment: fixed;
+        
+}  
+
 main {
         display: grid;
         grid-template-columns: 2fr 0.9fr;
         grid-template-rows: 7vh 60vh;
-        gap: 30px;
-    }   
+        gap: 10px;
+}   
 div#products div.watches {
     width: 70%;
 }
@@ -684,11 +703,35 @@ section#home {
 #home img{
     height: 600px;
 }
+
+
+@keyframes glisse{
+    0% {
+        transform: translateX(-800px);
+    }
+    10% {
+        transform: translateX(-800px);
+    }
+    33% {
+        transform: translateX(-2650px);
+    }
+    43% {
+        transform: translateX(-2650px);
+    }
+    66% {
+        transform: translateX(-5000px);
+    }
+    76% {
+        transform: translateX(-5000px);
+    }
+    100% {
+        transform: translateX(-800px);
+    }
 }
 
 
 /* responsive for smartphones _______________________________________________________*/
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 778px) {
     html , body {
     background-attachment: fixed;
     
@@ -779,7 +822,8 @@ section#home {
     } 
 
     div#products div.watches {
-        width: 35%;
+        width: 30%;
+        margin: 12px;
     }
 
     div#cart {
@@ -830,18 +874,8 @@ section#home {
         padding: 0 auto;
     }
 
+    #home img {
+        opacity: 0;
     }
 
-
-      section#home{
-        height: 84%;;
-      }
-
-      #home p{
-        font-size: 1.3em;
-        width: 90%;
-        padding: 0 auto;
     }
-
-
-    

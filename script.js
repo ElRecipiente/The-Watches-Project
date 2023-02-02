@@ -206,11 +206,15 @@ function totalPrice(i) {
 
 totalPrice(cart);
 
-let showCartLogo = document.querySelector("#cart_logo");
-
 ////////////////////////////////////////////////////////////////////////////
 
-showCartLogo.addEventListener("click", function () {
+let showCartLogo = document.querySelector("#cart_logo");
+
+showCartLogo.addEventListener("click", () => {
+    showCartOnClick()
+});
+
+function showCartOnClick() {
     let showCart = document.querySelector(".cart_container");
     if (showCart.style.display === "none") {
         showCart.style.display = "block";
@@ -218,10 +222,11 @@ showCartLogo.addEventListener("click", function () {
     else {
         showCart.style.display = "none";
     }
+}
 
-});
+showCartOnClick();
 
-function showNumberInCartLogo(i) {
+function showNumberInCartLogo() {
     let numberInCartLogo = document.querySelector("#number_of_item_in_cart");
     numberInCartLogo.style.backgroundColor = "black";
     let nbInCart = 0;
@@ -229,6 +234,7 @@ function showNumberInCartLogo(i) {
         nbInCart += cart[i].number;
         if (cart[i].number < 1) {
             numberInCartLogo.textContent = "";
+            numberInCartLogo.style.backgroundColor = "white";
         }
         numberInCartLogo.textContent = `${nbInCart}`;
     }
