@@ -4,6 +4,7 @@ html , body {
     background-image: url(images/bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100%;
     font-family: 'Nunito', sans-serif;
     color: black;
@@ -631,9 +632,7 @@ div#cart {
   div#products div.watches div {
     flex-direction: column;
 }
-div#products {
-    overflow-y: scroll;
-}
+
 body > footer {
     display: flex;
     justify-content: center;
@@ -642,67 +641,13 @@ body > footer {
   }
 }
 
-/* responsive for tablets _______________________________________________________*/
+/* responsive for tablets and smartphones  _______________________________________________________*/
 @media screen and (max-width: 778px) {
-html , body {
-        background-attachment: fixed;
-        
-}  
-
-main {
-        display: grid;
-        grid-template-columns: 2fr 0.9fr;
-        grid-template-rows: 7vh 60vh;
-        gap: 10px;
-}   
-div#products div.watches {
-    width: 70%;
-}
-nav {
-    height: 20vh;
-    flex-direction: column;
-    justify-content: space-between;
-}
-#nav_logo{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-    
-}
-h2,h3 {
-    font-size: 1.2em;
-}
-
-section#home {
-    width: 90%;
-    margin: 0 auto;
-    height: 70%;
-}
-
-#home p{
-    font-size: 1.3em;
-    width: 50%;
-    padding: 0 auto;
-}
-
-#home img{
-    height: 600px;
-}
-}
-
-
-/* responsive for smartphones _______________________________________________________*/
-@media screen and (max-width: 778px) {
-    html , body {
-    background-attachment: fixed;
-    
-    }   
-
     nav {
         height: 12vh;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         position: sticky;
         top: 0;
         z-index: 20;
@@ -715,6 +660,7 @@ section#home {
         justify-content: center;
         align-items: center;
         margin-right: 10px;
+        margin-top: 10px;
     }
 
     #brandname{
@@ -770,8 +716,8 @@ section#home {
         width: 92.5%;
     }
     main {
-            width: 95%;
-            margin: 1.5em auto;
+            width: 100%;
+            margin: 1em auto;
             display: flex;
             flex-direction: column-reverse;
             justify-content: center;
@@ -784,8 +730,8 @@ section#home {
     } 
 
     div#products div.watches {
-        width: 30%;
-        margin: 12px;
+        width: 32%;
+        margin: 10px;
     }
 
     div#cart {
@@ -827,7 +773,9 @@ section#home {
       }
 
       section#home{
-        height: 84%;;
+        height: 84%; 
+        width: 90%;
+        margin: 0 auto;
       }
 
       #home p{
@@ -838,8 +786,11 @@ section#home {
 
     #home img {
         opacity: 0;
+        height: 600px;
     }
-
+    
+    }
+    
     }
 
     
