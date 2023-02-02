@@ -581,9 +581,19 @@ div#cart {
     }
 
     .panier .form-panier{
+        display: flex;
+        flex-direction: column;
+        margin: 5px 5px;
+        font-size: 25px;
         width: fit-content;
         background-color: teal;
         visibility: visible;
+    }
+
+    article .panier .qcm{
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
     
     .panier img{
@@ -597,16 +607,6 @@ div#cart {
         justify-content: space-between;
         align-items: center;
     }
-
-    #panier-spe .buy{
-        border: 5px solid blue;
-        width: fit-content;
-    }
-
-    #panier-spe .buy button{
-        cursor: pointer;
-    }
-
     
 
     
@@ -826,6 +826,10 @@ section#home {
         font-size: 1.3em;
         width: 90%;
         padding: 0 auto;
+    }
+
+    #home img {
+        opacity: 0;
     }
 
     }
