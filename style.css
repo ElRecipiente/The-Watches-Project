@@ -626,21 +626,6 @@ div#cart {
     }
     
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* responsive for smaller screens________________________________________________________________________________*/
 @media screen and (max-width: 1440px) {
   div#products div.watches div {
@@ -657,10 +642,7 @@ body > footer {
 
 /* responsive for tablets and smartphones  _______________________________________________________*/
 @media screen and (max-width: 778px)  {
-    html , body {
-    background-attachment: fixed;
-    
-    }   
+      
     @keyframes glisse{
         0% {
             transform: translateX(-800px);
