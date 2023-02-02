@@ -754,10 +754,10 @@ body > footer {
 
     div#products div.watches {
         width: 32%;
-        margin: 10px;
     }
 
     div#cart {
+        margin: 0;
         margin-bottom: 10%;
       }
 
@@ -812,4 +812,24 @@ body > footer {
         height: 600px;
     }
     
+    /********CARROUSEL********/
+    main {
+        max-width: 100vw;
+        width: 100%;
+        margin: 0;
+    }
+
+    div#products {
+        flex-flow: row;
+        width: 100%;
+        max-width: 100vw;
+        margin: 2em 0;
+        overflow: scroll;
+        justify-content: flex-start;
+    }
+
+    div#products div.watches {
+        width: fit-content;
+        min-width: 250px;
+    }
     }

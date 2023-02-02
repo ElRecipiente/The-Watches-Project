@@ -240,6 +240,7 @@ function showNumberInCartLogo() {
     }
 }
 
+// SearchBar on Cart Page //
 let searchInput = document.querySelector("input#searchBar")
 
 function showInput() {
@@ -264,3 +265,7 @@ function filterInput() {
         }
     }
 }
+
+///////////////////////////////
+
+// Carrousel ? //
