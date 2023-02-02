@@ -203,11 +203,31 @@ function showNumberInCartLogo(i) {
         if (cart[i].number < 1) {
             numberInCartLogo.textContent = "";
         }
-        function showInput() {
-            let thisInput = document.querySelector("input")
-            thisInput.classList.toggle("active")
-            console.log("clic")
-        }
         numberInCartLogo.textContent = `${nbInCart}`;
+    }
+}
+
+let searchInput = document.querySelector("input")
+
+function showInput() {
+    searchInput.classList.toggle("active")
+    searchInput.value = "";
+    setTimeout(() => {
+        filterInput();
+    }, 400);
+}
+
+function filterInput() {
+    let thisWatch = document.querySelectorAll(".watches");
+    let filter = searchInput.value.toUpperCase();
+    for (let i = 0; i < availableProducts.length; i++) {
+        if (availableProducts[i].name.toUpperCase().indexOf(filter) > -1) {
+            thisWatch[i].style.display = "";
+            console.log("if proc");
+        }
+        else {
+            thisWatch[i].style.display = "none";
+            console.log("else proc");
+        }
     }
 }
