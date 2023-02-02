@@ -4,6 +4,7 @@ html , body {
     background-image: url(images/bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100%;
     font-family: 'Nunito', sans-serif;
     color: black;
@@ -104,8 +105,8 @@ a:hover {
 #number_of_item_in_cart{
     margin: 0 0 15px 0;
     font-weight: bolder;
-    background-color: black;
-    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(252, 250, 250);
     border-radius: 50%;
     padding: 2px 6px;
 }
@@ -654,29 +655,41 @@ div#cart {
     }
     
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* responsive for smaller screens________________________________________________________________________________*/
 @media screen and (max-width: 1440px) {
   div#products div.watches div {
     flex-direction: column;
 }
-div#products {
-    overflow-y: scroll;
+
+h1{
+    font-size: 3.5em;
+    margin: 5px 0 0 0;
 }
+
+h5{
+    font-size: 1em;
+}
+
+.logo {
+    height: 15px;
+    margin: 5px 10px;
+  }
+
+  #cart_logo{
+    height: 15px;
+    margin: 0 0 5px 12px;
+}
+
+#number_of_item_in_cart{
+    margin: 0 0 15px 0;
+    font-weight: bolder;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 5px;
+    font-size: 0.7em;
+}
+
 body > footer {
     display: flex;
     justify-content: center;
@@ -685,91 +698,37 @@ body > footer {
   }
 }
 
-/* responsive for tablets _______________________________________________________*/
-@media screen and (max-width: 778px) {
-html , body {
-        background-attachment: fixed;
-        
-}  
-
-main {
-        display: grid;
-        grid-template-columns: 2fr 0.9fr;
-        grid-template-rows: 7vh 60vh;
-        gap: 10px;
-}   
-div#products div.watches {
-    width: 70%;
-}
-nav {
-    height: 20vh;
-    flex-direction: column;
-    justify-content: space-between;
-}
-#nav_logo{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-    
-}
-h2,h3 {
-    font-size: 1.2em;
-}
-
-section#home {
-    width: 90%;
-    margin: 0 auto;
-    height: 70%;
-}
-
-#home p{
-    font-size: 1.3em;
-    width: 50%;
-    padding: 0 auto;
-}
-
-#home img{
-    height: 600px;
-}
-
-
-@keyframes glisse{
-    0% {
-        transform: translateX(-800px);
+/* responsive for tablets and smartphones  _______________________________________________________*/
+@media screen and (max-width: 778px)  {
+      
+    @keyframes glisse{
+        0% {
+            transform: translateX(-800px);
+        }
+        10% {
+            transform: translateX(-800px);
+        }
+        33% {
+            transform: translateX(-2650px);
+        }
+        43% {
+            transform: translateX(-2650px);
+        }
+        66% {
+            transform: translateX(-5000px);
+        }
+        76% {
+            transform: translateX(-5000px);
+        }
+        100% {
+            transform: translateX(-800px);
+        }
     }
-    10% {
-        transform: translateX(-800px);
-    }
-    33% {
-        transform: translateX(-2650px);
-    }
-    43% {
-        transform: translateX(-2650px);
-    }
-    66% {
-        transform: translateX(-5000px);
-    }
-    76% {
-        transform: translateX(-5000px);
-    }
-    100% {
-        transform: translateX(-800px);
-    }
-}
-
-
-/* responsive for smartphones _______________________________________________________*/
-@media screen and (max-width: 778px) {
-    html , body {
-    background-attachment: fixed;
-    
-    }   
-
     nav {
         height: 12vh;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         position: sticky;
         top: 0;
         z-index: 20;
@@ -778,10 +737,12 @@ section#home {
 
     #nav_logo{
         display:flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
+        flex-flow: wrap;
         justify-content: center;
         align-items: center;
         margin-right: 10px;
+        margin-top: 10px;
     }
 
     #brandname{
@@ -810,25 +771,7 @@ section#home {
         font-size: 0.8em;
     }
 
-    .logo {
-        height: 20px;
-        margin: 5px 10px;
-      }
-
-      #cart_logo{
-        height: 20px;
-        margin: 0 0 5px 12px;
-    }
     
-    #number_of_item_in_cart{
-        margin: 0 0 15px 0;
-        font-weight: bolder;
-        background-color: white;
-        color: white;
-        border-radius: 50%;
-        padding: 1px 5px;
-        font-size: 0.7em;
-    }
 
     h2,h3 {
         font-size: 1.2em;
@@ -837,8 +780,8 @@ section#home {
         width: 92.5%;
     }
     main {
-            width: 95%;
-            margin: 1.5em auto;
+            width: 100%;
+            margin: 1em auto;
             display: flex;
             flex-direction: column-reverse;
             justify-content: center;
@@ -851,11 +794,11 @@ section#home {
     } 
 
     div#products div.watches {
-        width: 30%;
-        margin: 12px;
+        width: 32%;
     }
 
     div#cart {
+        margin: 0;
         margin-bottom: 10%;
       }
 
@@ -894,7 +837,9 @@ section#home {
       }
 
       section#home{
-        height: 84%;;
+        height: 84%; 
+        width: 90%;
+        margin: 0 auto;
       }
 
       #home p{
@@ -905,6 +850,27 @@ section#home {
 
     #home img {
         opacity: 0;
+        height: 600px;
+    }
+    
+    /********CARROUSEL********/
+    main {
+        max-width: 100vw;
+        width: 100%;
+        margin: 0;
     }
 
+    div#products {
+        flex-flow: row;
+        width: 100%;
+        max-width: 100vw;
+        margin: 2em 0;
+        overflow: scroll;
+        justify-content: flex-start;
+    }
+
+    div#products div.watches {
+        width: fit-content;
+        min-width: 250px;
+    }
     }

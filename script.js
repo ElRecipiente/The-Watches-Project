@@ -29,7 +29,7 @@ const availableProducts = [
             src: "montre3.png",
             alt: "A super Pas de Cartier watch that's awesome and that you should buy"
         },
-        price: 1499,
+        price: 7499,
         number: 1
     },
     {
@@ -57,6 +57,33 @@ const availableProducts = [
             alt: "A super Vélux watch that's awesome and that you should buy"
         },
         price: 9999,
+        number: 1
+    },
+    {
+        name: "Rolexx Classic",
+        image: {
+            src: "montre7.png",
+            alt: "A super Rolexx watch that's awesome and that you should buy"
+        },
+        price: 1999,
+        number: 1
+    },
+    {
+        name: "Rolexx Blue&nbsp;Lagoon",
+        image: {
+            src: "montre8.png",
+            alt: "A super Rolexx watch that's awesome and that you should buy"
+        },
+        price: 3199,
+        number: 1
+    },
+    {
+        name: "Cartier Le&nbsp;Périph'",
+        image: {
+            src: "montre9.png",
+            alt: "A super Rolexx watch that's awesome and that you should buy"
+        },
+        price: 6999,
         number: 1
     }
 ];
@@ -117,6 +144,7 @@ function removeWatchFromCart(thisWatch) {
     cart[thisWatch].number = 1;
     cart.splice(thisWatch, 1)
     displayCart();
+    showNumberInCartLogo();
     //this code must stay
     console.log(cart);
 }
@@ -151,6 +179,7 @@ function displayCart() {
             cart[i].number = parseInt(selectElement[i].value, 10);
             console.log("ça marche !");
             totalPrice(cart);
+            showNumberInCartLogo();
         })
 
         for (let j = 1; j < 10; j++) {
@@ -163,7 +192,7 @@ function displayCart() {
         }
     }
     totalPrice(cart);
-    showNumberInCartLogo(cart);
+    showNumberInCartLogo();
 };
 
 function totalPrice(i) {
@@ -187,8 +216,10 @@ showCartLogo.addEventListener("click", () => {
     showCartOnClick()
 });
 
+let showCart = document.querySelector(".cart_container");
+
 function showCartOnClick() {
-    let showCart = document.querySelector(".cart_container");
+
     if (showCart.style.display === "none") {
         showCart.style.display = "block";
     }
@@ -205,14 +236,17 @@ function showNumberInCartLogo() {
     let nbInCart = 0;
     for (let i = 0; i < cart.length; i++) {
         nbInCart += cart[i].number;
-        if (cart[i].number < 1) {
-            numberInCartLogo.textContent = "";
-            numberInCartLogo.style.backgroundColor = "white";
-        }
-        numberInCartLogo.textContent = `${nbInCart}`;
     }
+    if (cart.length == 0) {
+        numberInCartLogo.textContent = "";
+        numberInCartLogo.style.backgroundColor = "rgba(255, 255, 255, 0)";
+        showCart.style.display = "none";
+
+    }
+    numberInCartLogo.textContent = nbInCart
 }
 
+// SearchBar on Cart Page //
 let searchInput = document.querySelector("input#searchBar")
 
 function showInput() {
@@ -237,3 +271,7 @@ function filterInput() {
         }
     }
 }
+
+///////////////////////////////
+
+// Carrousel ? //
