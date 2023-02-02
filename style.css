@@ -34,6 +34,10 @@ nav {
     justify-content: space-around;
 }
 
+nav > div:first-child, nav > div:last-child {
+    flex: 1;
+}
+
 h1,h5 {
     font-family: 'Amatic SC', cursive;
     display: flex;
@@ -55,6 +59,26 @@ a {
     text-decoration: none;
     color: white;
     transition: 0.4s;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+input {
+    margin: 1em;
+    width: 0;
+    visibility: hidden;
+    transition: width 0.4s ease-out,
+    visibility 0.39s ease-out;
+}
+
+input.active {
+    width: 150px;
+    visibility: visible;
+    transition: width 0.4s ease-out,
+    visibility 0.4s ease-out;
 }
 
 a:hover {
@@ -125,7 +149,7 @@ div#products div.watches:hover {
 }
 
 div#products div.watches img {
-    width: 30%;
+    width: 40%;
     transition: 0.4s;
     padding: 1em;
 }
@@ -142,6 +166,10 @@ div#products div.watches div *{
     height: fit-content;
 }
 
+div#products div.watches a {
+    font-size: 1.1em;
+}
+
 div#products div.watches div p {
     width: 30%;
     text-align: center;
@@ -149,11 +177,12 @@ div#products div.watches div p {
 }
 
 div#products div.watches div button {
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     background: transparent;
     cursor: pointer;
     transition: 0.4s;
+    font-size: 1em;
 }
 
 div#products div.watches div button:hover {
@@ -192,9 +221,8 @@ body > footer {
     text-shadow: 1px 1px 4px black;
 }
 
-.mainDiv img {
-    width: fit-content;
-    height: fit-content;
+.mainDiv h3 {
+    font-size: 1.5em;
 }
 
 .mainDiv div {
@@ -202,13 +230,23 @@ body > footer {
     padding-left: 2em;
 }
 
+.mainDiv #currentPhoto img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.mainDiv #currentPhoto {
+    width: 20%;
+}
+
 .mainDiv button {
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     background: transparent;
     cursor: pointer;
     transition: 0.4s;
     justify-self: flex-end;
+    font-size: 1em;
 }
 
 .mainDiv button:hover {
@@ -216,6 +254,79 @@ body > footer {
     box-shadow: 0 0 4px white;
 }
 
+.mainDiv .watchesPhotos {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 5%;
+    padding: 0 1em;
+}
+
+.mainDiv .watchesPhotos img {
+    width: 100%;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.mainDiv .watchesPhotos img:hover {
+    scale: 1.1;
+}
+
+/* MODAL CONTAINER */
+
+div.containerModal {
+    visibility: hidden;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    transition: visibility 0.4s;
+}
+
+div.containerModal.active {
+    visibility: visible;
+}
+
+div.overlay {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333333d3;
+    transition: opacity 0.2s 0.2s ease-out;
+}
+
+div.containerModal.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+div.modal {
+    opacity: 0;
+    position: absolute;
+    width: fit-content;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
+
+div.modal img {
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+div.containerModal.active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
 
 /***********/
 /****CART***/
@@ -223,8 +334,7 @@ body > footer {
 div#cart {
   display: flex;
   flex-direction: column;
-  /* box-shadow: 0 0 10px rgb(129, 129, 129); */
-  padding: 15px;
+  padding: 1em;
   height: 500px;
   background: rgb(255, 255, 255, 0.9);
   color: white;
@@ -256,28 +366,38 @@ div#cart {
     text-align: center;
     list-style-type: none;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-#cart header > * {
-    flex: 1;
+#cart header span {
+    padding: 0 1em;
 }
 
-#cart .grande li > * {
-    flex: 1;
-    display: flex;
-}
-#cart .grande ul li p{
+#cart .grande ul li>p{
     margin: 0;
-    margin-left: 50px;
+    width: fit-content;
+}
+
+#cart ul li div {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#cart ul li div div {
+    display: flex;
+    align-items: center;
 }
 
 
-#cart ul li span {
-    display: flex;
-    margin-left: 20px;
-    margin-top: 5px;
-    align-items: center;
+#cart .grande ul li div div p{
+    flex-grow: 1;
+}
+
+#cart ul li img {
+    padding: 1em;
+    width: 100%;
 }
 
 #cart .grande ul {
@@ -288,32 +408,25 @@ div#cart {
 #cart .grande ul li {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 1em 0;
     font-size: 15px;
     background: rgb(207, 189, 189);
-    width: 100%;
-    height: 50px;
+    justify-content: space-between;
     text-align: center;
     list-style-type: none;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 #cart .grande ul li .btn img {
-    width: 15px;
-    height: 20px;
+    width: 100%;
+    padding: 0;
 }
 
 #cart .grande ul li .btn{
-    margin-left: 30px;
     border: none;
     background: transparent;
     cursor: pointer;
-}
-
-#cart .grande ul li div img{
-    width: 20px;
-    height: 30px;
+    width: 10%;
 }
 
 #cart .grande {
@@ -322,6 +435,11 @@ div#cart {
   height: 100%;
   overflow-y: scroll;
   background:rgba(0, 0, 0, 0.1);
+}
+
+#cart .grande ul li select{
+    text-align: center;
+    margin-left: 3em;
 }
 
 #cart footer {
@@ -343,9 +461,97 @@ div#cart {
     margin: 15px 0;
 }
 
-#cart .grande select {
-    text-align: center;
-}
+
+
+    /***************************************/
+    /***************************************/
+    /******************Home*****************/
+    /***************************************/
+    /***************************************/
+
+    #home{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 80%;
+    }
+
+    #home .discret{
+        font-size: 10px;
+        color: rgba(204, 192, 175, 0.233);
+    }
+
+    #home button,
+    #home p{
+        display: flex;
+        z-index: 10;
+        margin: 20px 10px;
+    }
+
+    #home p{
+        font-size: 30px;
+        width: 800px;
+        text-align: center;
+        color: white;
+    }
+
+    #home button {
+        width: fit-content;
+        font-size: 20px;
+        text-align: center;
+        background-color: transparent;
+        border: 2px solid white;
+    }
+
+    #home button a {
+        padding: 15px;
+        font-size: 1em;
+        display: flex;
+        text-align: center;
+    }
+
+    .slider {
+        position: absolute;
+        width: 100vw;
+        overflow: hidden;
+        height: 90%;
+    }
+
+    .slides{
+        animation: glisse 15s infinite;
+        display: flex;
+    }
+    .slide img {
+        width: 2000px;
+        height: auto;
+    }
+
+    @keyframes glisse{
+        0% {
+            transform: translateX(0);
+        }
+        10% {
+            transform: translateX(0);
+        }
+        33% {
+            transform: translateX(-2000px);
+        }
+        43% {
+            transform: translateX(-2000px);
+        }
+        66% {
+            transform: translateX(-4000px);
+        }
+        76% {
+            transform: translateX(-4000px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 
 /* responsive for smaller screens________________________________________________________________________________*/
 @media screen and (max-width: 1440px) {
@@ -362,7 +568,7 @@ body > footer {
     margin: auto;
   }
 }
- 
+
 /* responsive for tablets _______________________________________________________*/
 @media screen and (max-width: 778px) {
 main {
@@ -389,7 +595,24 @@ nav {
 h2,h3 {
     font-size: 1.2em;
 }
+
+section#home {
+    width: 90%;
+    margin: 0 auto;
+    height: 70%;
 }
+
+#home p{
+    font-size: 1.3em;
+    width: 50%;
+    padding: 0 auto;
+}
+
+#home img{
+    height: 600px;
+}
+}
+
 
 /* responsive for smartphones _______________________________________________________*/
 @media screen and (max-width: 678px) {
@@ -490,88 +713,62 @@ h2,h3 {
         margin-bottom: 10%;
       }
 
-    }
-
-
-    /***************************************/
-    /***************************************/
-    /******************Home*****************/
-    /***************************************/
-    /***************************************/
-
-    #home{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
+      /********MEDIA TYPE********/
+      div.mainDiv {
+        flex-flow: column;
+        height: fit-content;
+        text-align: justify;
+        width: 90%;
+        margin: 0 auto;
+      }
+    
+      div.mainDiv div {
+        padding: 1em;
+        margin: 0;
         width: 100%;
-        height: 80%;
+      }
+    
+      div.mainDiv div h3 {
+        background: transparent;
+        width: fit-content;
+        text-align: center;
+      }
+    
+      div.mainDiv #currentPhoto {
+        width: 50%;
+      }
+    
+      div.mainDiv .watchesPhotos {
+        flex-flow: row;
+        width: 20%;
+      }
+    
+      div.mainDiv .watchesPhotos img {
+        margin: 0 1em;
+      }
+
+      section#home{
+        height: 84%;;
+      }
+
+      #home p{
+        font-size: 1.3em;
+        width: 90%;
+        padding: 0 auto;
     }
 
-    #home button,
-    #home p{
-        display: flex;
-        z-index: 10;
-        margin: 20px 10px;
     }
 
-    #home p{
-        font-size: 30px;
-        color: white;
+
+      section#home{
+        height: 84%;;
+      }
+
+      #home p{
+        font-size: 1.3em;
+        width: 90%;
+        padding: 0 auto;
     }
 
-    #home button {
-        padding: 15px 5px;
-        width: 10vh;
-        font-size: 30px;
-        border-radius: 20px;
-        background-color: transparent;
-    }
 
-    #home button:hover{
-        font-size: 40px;
-        background-color: transparent;
-        color: white;
-        border-radius: 20px;
-        width: 12vh;
-    }
-
-    .slider {
-        position: absolute;
-        width: 100vw;
-        overflow: hidden;
-        height: 90%;
-    }
-
-    .slides{
-        animation: glisse 15s infinite;
-        display: flex;
-    }
-    .slide img {
-        width: 2500px;
-        height: 5000px;
-    }
-
-    @keyframes glisse{
-        0% {
-            transform: translateX(0);
-        }
-        10% {
-            transform: translateX(-100vw);
-        }
-        24% {
-            transform: translateX(-200vw);
-        }
-        35% {
-            transform: translateX(-300vw);
-        }
-        55% {
-            transform: translateX(-400vw);
-        }
-        75% {
-            transform: translateX(-500vw);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
+    

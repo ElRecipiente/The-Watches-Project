@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
-    <!-- <script src="script.js" defer></script> -->
+    <script src="article1.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,10 @@
 </head>
 
 <body>
+    <div class="containerModal">
+        <div class="overlay" onclick="modalTrigger()"></div>
+        <div class="modal"></div>
+    </div>
     <nav>
         <div></div>
         <div id="brandname">
@@ -30,15 +34,24 @@
         </div>
 
         <div id="nav_logo">
-            <a href=""><img class="logo" src="images/home_logo.png" alt="home logo"></a>
+            <a href="home.html"><img class="logo" src="images/home_logo.png" alt="home logo"></a>
             <a href=""><img class="logo" src="images/account_logo.png" alt="account logo"></a>
-            <a href=""><img class="logo" src="images/cart_logo.png" alt="cart logo"></a>
+            <a href="index.html"><img class="logo" src="images/cart_logo.png" alt="cart logo"></a>
         </div>
     </nav>
 
     <div class="mainDiv">
+        <div class="watchesPhotos">
+            <img onclick="showThisPic(0)" src="images/rolex1.webp"
+                alt="A super Rolexx watch that's awesome and that you should buy">
+            <img onclick="showThisPic(1)" src="images/rolex2.webp"
+                alt="A super Rolexx watch that's awesome and that you should buy">
+            <img onclick="showThisPic(2)" src="images/rolex3.webp"
+                alt="A super Rolexx watch that's awesome and that you should buy">
+        </div>
+        <div id="currentPhoto">
 
-        <img src="images/montre1.png" alt="A super Rolexx watch that's awesome and that you should buy">
+        </div>
         <div>
             <h3>Rolexx, une montre qu'elle vous va bien.</h3>
             <p>Avec un design simple mais élégant, et son bracelet sophistiqué, la Rolexx est la montre parfaite pour
