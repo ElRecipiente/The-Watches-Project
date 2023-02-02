@@ -67,7 +67,8 @@ button {
     cursor: pointer;
 }
 
-input {
+/**********Search Bar***********/
+input#searchBar {
     margin: 1em;
     width: 0;
     visibility: hidden;
@@ -75,12 +76,13 @@ input {
     visibility 0.39s ease-out;
 }
 
-input.active {
+input#searchBar.active {
     width: 150px;
     visibility: visible;
     transition: width 0.4s ease-out,
     visibility 0.4s ease-out;
 }
+/********************************/
 
 a:hover {
     text-shadow: 0 0 4px white;
