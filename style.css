@@ -169,6 +169,8 @@ div#products div.watches div *{
 }
 
 div#products div.watches a {
+    display: flex;
+    justify-content: center;
     font-size: 1.1em;
 }
 

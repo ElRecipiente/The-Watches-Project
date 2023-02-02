@@ -71,7 +71,7 @@ function displayAvailableProducts() {
         divWatches.classList.add("watches");
 
         divWatches.innerHTML = `
-        <img src="images/${availableProducts[i].image.src}" alt="${availableProducts[i].image.alt}">
+        <a href="article${i + 1}.html"><img src="images/${availableProducts[i].image.src}" alt="${availableProducts[i].image.alt}"></a>
         <a href="article${i + 1}.html">${availableProducts[i].name}</a>
         <div>
             <p>${availableProducts[i].price}&nbsp;$</p>
