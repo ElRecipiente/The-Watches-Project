@@ -558,6 +558,73 @@ div#cart {
             transform: translateX(0);
         }
     }
+    
+    /****************************/
+    /**********PANIER***********/
+    
+    
+    article{
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        width: 90%;
+        margin: 30px auto;
+        height: 74%;
+    }
+
+    .panier{
+        background-color: rgb(255, 255, 255);
+        padding: 5px 5px;
+        width: 33%;
+        margin: 20px 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panier .form-panier{
+        width: fit-content;
+        background-color: teal;
+        visibility: visible;
+    }
+    
+    .panier img{
+        width: 100px;
+        height: 100px;
+    }
+
+    #panier-spe{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #panier-spe .buy{
+        border: 5px solid blue;
+        width: fit-content;
+    }
+
+    #panier-spe .buy button{
+        cursor: pointer;
+    }
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* responsive for smaller screens________________________________________________________________________________*/
 @media screen and (max-width: 1440px) {
