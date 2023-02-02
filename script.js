@@ -213,7 +213,7 @@ function showNumberInCartLogo() {
     }
 }
 
-let searchInput = document.querySelector("input")
+let searchInput = document.querySelector("input#searchBar")
 
 function showInput() {
     searchInput.classList.toggle("active")

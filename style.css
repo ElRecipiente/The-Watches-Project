@@ -67,7 +67,8 @@ button {
     cursor: pointer;
 }
 
-input {
+/**********Search Bar***********/
+input#searchBar {
     margin: 1em;
     width: 0;
     visibility: hidden;
@@ -75,12 +76,13 @@ input {
     visibility 0.39s ease-out;
 }
 
-input.active {
+input#searchBar.active {
     width: 150px;
     visibility: visible;
     transition: width 0.4s ease-out,
     visibility 0.4s ease-out;
 }
+/********************************/
 
 a:hover {
     text-shadow: 0 0 4px white;
@@ -556,6 +558,73 @@ div#cart {
             transform: translateX(0);
         }
     }
+    
+    /****************************/
+    /**********PANIER***********/
+    
+    
+    article{
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        width: 90%;
+        margin: 30px auto;
+        height: 74%;
+    }
+
+    .panier{
+        background-color: rgb(255, 255, 255);
+        padding: 5px 5px;
+        width: 33%;
+        margin: 20px 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panier .form-panier{
+        display: flex;
+        flex-direction: column;
+        margin: 5px 5px;
+        font-size: 25px;
+        width: fit-content;
+        background-color: teal;
+        visibility: visible;
+    }
+
+    article .panier .qcm{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    
+    .panier img{
+        width: 100px;
+        height: 100px;
+    }
+
+    #panier-spe{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* responsive for smaller screens________________________________________________________________________________*/
 @media screen and (max-width: 1440px) {
@@ -765,6 +834,10 @@ section#home {
         font-size: 1.3em;
         width: 90%;
         padding: 0 auto;
+    }
+
+    #home img {
+        opacity: 0;
     }
 
     }

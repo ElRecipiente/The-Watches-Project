@@ -30,7 +30,7 @@
         </div>
 
         <div id="nav_logo">
-            <input id="searchBar" type="text" onkeyup="filterInput()">
+            <input type="text">
             <button onclick="showInput()"><img class="logo" src="images/loupeREDIM.png" alt="research button"></button>
             <a href="index.html"><img class="logo" src="images/home_logo.png" alt="home logo"></a>
             <a href=""><img class="logo" src="images/account_logo.png" alt="account logo"></a>
@@ -39,37 +39,42 @@
         </div>
     </nav>
 
-    <main>
-        <div>
-            <h2>Notre sélection du mois : </h2>
-            <div id="products">
+    <article>
+        <div class="panier">
+            <img src="images/bg2.jpg" alt="">
+        </div>
+        <div class="panier">
+            <form action="" method="get" class="qcm">
+                <div class="form-panier">
+                    <label for="name">Enter your sexe : </label>
+                    <label for="name">Enter your name : </label>
+                    <label for="username">Enter your Prénom : </label>
+                    <label for="email">Enter your email : </label>
+                    <label for="adress">Enter your Adresse : </label>
+                </div>
+                <div class="form-panier">
+                    <select name="" id=""></select>
+                    <input type="text" name="name">
+                    <input type="text" name="name">
+                    <input type="text" name="name">
+                    <input type="email" name="email">
+                </div>
+            </form>
+            ,<div class="form-panier" id="panier-spe">
+                <input type="submit" value="Subscribe!" class="form-panier">
             </div>
         </div>
-        <div class="cart_container">
-            <h2 id="go_to_cart">Panier</h2>
-            <div id="cart">
-                <header>
-                    <div></div>
-                    <span>Nom</span>
-                    <span>Prix</span>
-                    <span>Quantité</span>
-                    <div></div>
-                    <div></div>
-                </header>
-                <div class="grande">
-                    <ul>
-                    </ul>
-                </div>
-                <footer>
-                    <p id="total_in_cart">Total : 00$</p>
-                </footer>
-                <div class="payement">
-                    <img src="images/cb_icon.png" alt="cb_icon">
-                    <img src="images/paypal_icon_2.png" alt="cb_icon">
-                </div>
+        <div class="panier" id="panier-spe">
+            <div>
+                <p>Total TTC : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, laudantium?</p>
+                <p>livraison : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, id.</p>
             </div>
+
+            <div class="buy"><button>Payement !</button></div>
         </div>
-    </main>
+    </article>
+
+
 
     <footer>
         <a href="https://www.instagram.com/watchesdotcom/" target="blank">
