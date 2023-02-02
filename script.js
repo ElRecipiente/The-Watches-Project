@@ -144,6 +144,7 @@ function removeWatchFromCart(thisWatch) {
     cart[thisWatch].number = 1;
     cart.splice(thisWatch, 1)
     displayCart();
+    showNumberInCartLogo();
     //this code must stay
     console.log(cart);
 }
@@ -178,6 +179,7 @@ function displayCart() {
             cart[i].number = parseInt(selectElement[i].value, 10);
             console.log("ça marche !");
             totalPrice(cart);
+            showNumberInCartLogo();
         })
 
         for (let j = 1; j < 10; j++) {
@@ -190,7 +192,7 @@ function displayCart() {
         }
     }
     totalPrice(cart);
-    showNumberInCartLogo(cart);
+    showNumberInCartLogo();
 };
 
 function totalPrice(i) {
@@ -214,8 +216,10 @@ showCartLogo.addEventListener("click", () => {
     showCartOnClick()
 });
 
+let showCart = document.querySelector(".cart_container");
+
 function showCartOnClick() {
-    let showCart = document.querySelector(".cart_container");
+
     if (showCart.style.display === "none") {
         showCart.style.display = "block";
     }
@@ -232,12 +236,14 @@ function showNumberInCartLogo() {
     let nbInCart = 0;
     for (let i = 0; i < cart.length; i++) {
         nbInCart += cart[i].number;
-        if (cart[i].number < 1) {
-            numberInCartLogo.textContent = "";
-            numberInCartLogo.style.backgroundColor = "white";
-        }
-        numberInCartLogo.textContent = `${nbInCart}`;
     }
+    if (cart.length == 0) {
+        numberInCartLogo.textContent = "";
+        numberInCartLogo.style.backgroundColor = "rgba(255, 255, 255, 0)";
+        showCart.style.display = "none";
+
+    }
+    numberInCartLogo.textContent = nbInCart
 }
 
 // SearchBar on Cart Page //
