@@ -29,7 +29,7 @@ const availableProducts = [
             src: "montre3.png",
             alt: "A super Pas de Cartier watch that's awesome and that you should buy"
         },
-        price: 1499,
+        price: 7499,
         number: 1
     },
     {
@@ -57,6 +57,33 @@ const availableProducts = [
             alt: "A super Vélux watch that's awesome and that you should buy"
         },
         price: 9999,
+        number: 1
+    },
+    {
+        name: "Rolexx Classic",
+        image: {
+            src: "montre7.png",
+            alt: "A super Rolexx watch that's awesome and that you should buy"
+        },
+        price: 1999,
+        number: 1
+    },
+    {
+        name: "Rolexx Blue&nbsp;Lagoon",
+        image: {
+            src: "montre8.png",
+            alt: "A super Rolexx watch that's awesome and that you should buy"
+        },
+        price: 3199,
+        number: 1
+    },
+    {
+        name: "Cartier Le&nbsp;Périph'",
+        image: {
+            src: "montre9.png",
+            alt: "A super Rolexx watch that's awesome and that you should buy"
+        },
+        price: 6999,
         number: 1
     }
 ];
