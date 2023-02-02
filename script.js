@@ -165,6 +165,7 @@ function displayCart() {
         }
     }
     totalPrice(cart);
+    showNumberInCartLogo(cart);
 };
 
 function totalPrice(i) {
@@ -206,4 +207,16 @@ showCartLogo.addEventListener("click", function () {
 
 });
 
+function showNumberInCartLogo(i) {
+    let numberInCartLogo = document.querySelector("#number_of_item_in_cart");
+    numberInCartLogo.style.backgroundColor = "black";
+    let nbInCart = 0;
+    for (let i = 0; i < cart.length; i++) {
+        nbInCart += cart[i].number;
+        if (cart[i].number < 1) {
+            numberInCartLogo.textContent = "";
+        }
 
+    }
+    numberInCartLogo.textContent = `${nbInCart}`;
+}
