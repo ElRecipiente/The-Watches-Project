@@ -40,43 +40,89 @@
     </nav>
 
     <article>
-        <div class="panier">
-            <img src="images/bg2.jpg" alt="">
-        </div>
+
         <div class="panier">
             <form action="" method="get" class="form">
                 <div class="form-example">
-                  <label for="name">Enter your name: </label>
-                  <input type="text" name="name">
+                    <label for="name">Enter your genre : </label>
+                    <select name="pets" id="pet-select">
+                        <option value="Chelou">Bizarre</option>
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                    </select>
                 </div>
                 <div class="form-example">
-                  <label for="email">Enter your email: </label>
-                  <input type="email" name="email">
+                    <label for="email">Enter your email: </label>
+                    <input type="email" name="email">
                 </div>
                 <div class="form-example">
-                  <label for="email">Enter your adress : </label>
-                  <input type="email" name="email">
+                    <label for="address">Enter your adress : </label>
+                    <input type="text" name="address">
                 </div>
                 <div class="form-example">
-                  <label for="email">Enter your prénom: </label>
-                  <input type="email" name="email">
+                    <label for="firstname">Enter your prénom: </label>
+                    <input type="text" name="firstname">
                 </div>
                 <div class="form-example">
-                  <label for="email">Enter your birthday: </label>
-                  <input type="email" name="email">
+                    <label for="dob">Enter your birthday: </label>
+                    <input type="text" name="dob">
                 </div>
-              </form>
-            ,<div class="form-panier" id="panier-spe">
-                <input type="submit" value="Subscribe!" class="form-panier">
-            </div>
-        </div>
-        <div class="panier" id="panier-spe">
+            </form>
+
+
             <div>
-                <p>Total TTC : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, laudantium?</p>
-                <p>livraison : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, id.</p>
+                <button>Info prix</button>
+                <button>Info livraison</button>
             </div>
 
+
+            <div class="form-btn">
+                <input type="submit" value="Subscribe!" class="form-example">
+            </div>
+        </div>
+
+
+        <div class="panier">
+            <div class="form-example"><label for="email">
+                Numero de carte bleu: </label>
+                <input type="email" name="email">
+            </div>
+            <div class="form-example"><label for="email">
+                Date d'éxpiration: </label>
+                <input type="email" name="email">
+            </div>
+            <div class="form-example"><label for="email">
+                pictogramme: </label>
+                <input type="email" name="email">
+            </div>
             <div class="buy"><button>Payement !</button></div>
+        </div>
+
+
+
+        <div class="panier" id="panier-spe">
+            <span>
+                <h3>CART</h3>
+            </span>
+            <div class="panier-list">
+                <ul>
+                    <li>plapla</li>
+                    <li>plapla</li>
+                    <li>plapla</li>
+                </ul>
+            </div>
+            <div class="total-ttc">
+                <div class="panier-prix">
+                    <p>Total TTC :</p>
+                    <p> Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="panier-desc">
+                    <p>livraison :</p>
+                    <p> Lorem, ipsum dolor sit </p>
+                </div>
+            </div>
+
+
         </div>
     </article>
 
