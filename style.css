@@ -658,12 +658,17 @@ body > footer {
 
 /* responsive for tablets _______________________________________________________*/
 @media screen and (max-width: 778px) {
+html , body {
+        background-attachment: fixed;
+        
+}  
+
 main {
         display: grid;
         grid-template-columns: 2fr 0.9fr;
         grid-template-rows: 7vh 60vh;
-        gap: 30px;
-    }   
+        gap: 10px;
+}   
 div#products div.watches {
     width: 70%;
 }
@@ -726,7 +731,7 @@ section#home {
 
 
 /* responsive for smartphones _______________________________________________________*/
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 778px) {
     html , body {
     background-attachment: fixed;
     
@@ -817,7 +822,8 @@ section#home {
     } 
 
     div#products div.watches {
-        width: 35%;
+        width: 30%;
+        margin: 12px;
     }
 
     div#cart {
