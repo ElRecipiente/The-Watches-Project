@@ -94,17 +94,17 @@ const products = document.querySelector("div#products")
 
 function displayAvailableProducts() {
     for (i = 0; i < availableProducts.length; i++) {
-        const divWatches = document.createElement("div");
-        divWatches.classList.add("watches");
+        const divWatch = document.createElement("div");
+        divWatch.classList.add("watch");
 
-        divWatches.innerHTML = `
+        divWatch.innerHTML = `
         <a href="article${i + 1}.html"><img src="images/${availableProducts[i].image.src}" alt="${availableProducts[i].image.alt}"></a>
         <a href="article${i + 1}.html">${availableProducts[i].name}</a>
         <div>
             <p>${availableProducts[i].price}&nbsp;$</p>
             <button onclick="addProductToCart(${i})">Ajouter au panier</button>
         </div>`;
-        products.append(divWatches)
+        products.append(divWatch)
     }
 };
 
@@ -140,9 +140,9 @@ function addProductToCart(avPIndex) {
 
 }
 
-function removeWatchFromCart(thisWatch) {
-    cart[thisWatch].number = 1;
-    cart.splice(thisWatch, 1)
+function removeWatchFromCart(watchIndex) {  // INDICE
+    cart[watchIndex].number = 1;
+    cart.splice(watchIndex, 1)
     displayCart();
     showNumberInCartLogo();
     //this code must stay
@@ -174,11 +174,12 @@ function displayCart() {
         </button>`;
 
         ulCart.append(watchInCart);
+
         let selectElement = document.querySelectorAll("select");
         selectElement[i].addEventListener("change", () => {
             cart[i].number = parseInt(selectElement[i].value, 10);
             console.log("ça marche !");
-            totalPrice(cart);
+            totalPrice();
             showNumberInCartLogo();
         })
 
@@ -191,11 +192,11 @@ function displayCart() {
             selectElement[i].append(anOption);
         }
     }
-    totalPrice(cart);
+    totalPrice();
     showNumberInCartLogo();
 };
 
-function totalPrice(i) {
+function totalPrice() {
 
     let totalInCart = document.getElementById("total_in_cart");
     let total = 0
@@ -206,7 +207,7 @@ function totalPrice(i) {
     totalInCart.textContent = `Total : ${total} $`
 }
 
-totalPrice(cart);
+totalPrice();
 
 ////////////////////////////////////////////////////////////////////////////
 
@@ -277,7 +278,7 @@ function showInput() {
 }
 
 function filterInput() {
-    let thisWatch = document.querySelectorAll(".watches");
+    let thisWatch = document.querySelectorAll(".watch");
     let filter = searchInput.value.toUpperCase();
     for (let i = 0; i < availableProducts.length; i++) {
         if (availableProducts[i].name.toUpperCase().indexOf(filter) > -1) {
