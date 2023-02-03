@@ -210,6 +210,21 @@ totalPrice(cart);
 
 ////////////////////////////////////////////////////////////////////////////
 
+
+function DesktopDisplayWithCart() {
+    let desktopDisplay = document.querySelector('main');
+    desktopDisplay.classList.remove("without_cart");
+    desktopDisplay.classList.add("with_cart");
+}
+
+function DesktopDisplayWitoutCart() {
+    let desktopDisplay = document.querySelector('main');
+    desktopDisplay.classList.remove("with_cart");
+    desktopDisplay.classList.add("without_cart");
+}
+
+
+
 let showCartLogo = document.querySelector("#cart_logo");
 
 showCartLogo.addEventListener("click", () => {
@@ -222,9 +237,11 @@ function showCartOnClick() {
 
     if (showCart.style.display === "none") {
         showCart.style.display = "block";
+        DesktopDisplayWithCart();
     }
     else {
         showCart.style.display = "none";
+        DesktopDisplayWitoutCart(); 
     }
 }
 
@@ -241,7 +258,7 @@ function showNumberInCartLogo() {
         numberInCartLogo.textContent = "";
         numberInCartLogo.style.backgroundColor = "rgba(255, 255, 255, 0)";
         showCart.style.display = "none";
-
+        DesktopDisplayWitoutCart(); 
     }
     numberInCartLogo.textContent = nbInCart
 }
