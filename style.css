@@ -664,6 +664,14 @@ div#cart {
         margin: 10px 0;
     }
     
+    div#products {
+        max-height: 65vh;
+        overflow-y: scroll;
+    }
+    
+    #cart {
+        max-height: 55vh;
+    }
 
 /* responsive for smaller screens________________________________________________________________________________*/
 @media screen and (max-width: 1440px) {
@@ -671,14 +679,14 @@ div#cart {
     flex-direction: column;
 }
 
-div#products {
+/* div#products {
     max-height: 65vh;
     overflow-y: scroll;
 }
 
 #cart {
     max-height: 55vh;
-}
+} */
 
 h1{
     font-size: 3.5em;
