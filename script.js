@@ -236,12 +236,13 @@ function showNumberInCartLogo() {
     let nbInCart = 0;
     for (let i = 0; i < cart.length; i++) {
         nbInCart += cart[i].number;
+        numberInCartLogo.style.color = "white";
     }
     if (cart.length == 0) {
         numberInCartLogo.textContent = "";
         numberInCartLogo.style.backgroundColor = "rgba(255, 255, 255, 0)";
         showCart.style.display = "none";
-
+        numberInCartLogo.style.color = "transparent";
     }
     numberInCartLogo.textContent = nbInCart
 }
