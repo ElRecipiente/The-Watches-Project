@@ -169,9 +169,7 @@ function displayCart() {
 
         </select>
     </span>
-        <button class="btn" onclick="removeWatchFromCart(${i})">
-            <img src="images/delete.png" alt="icone">
-        </button>`;
+        <button class="btn" onclick="removeWatchFromCart(${i})">☒</button>`;
 
         ulCart.append(watchInCart);
 
