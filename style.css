@@ -708,13 +708,13 @@ h5{
 }
 
 .logo {
-    height: 15px;
+    height: 25px;
     margin: 5px 10px;
   }
 
 #cart_logo{
-    height: 15px;
-    margin: 0 0 5px 12px;
+    height: 25px;
+    margin: 0 0 10px 12px;
 }
 
 #number_of_item_in_cart{
@@ -725,7 +725,7 @@ h5{
     padding: 1px 5px;
     font-size: 0.7em;
 }
-div#products div.watches {
+div#products div.watch {
     width: 30%;
 }
 
@@ -739,10 +739,6 @@ body > footer {
 input#searchBar {
     order : 1;
     margin: 0.5em 0;
-}
-
-#nav_logo #cart_logo {
-    margin-bottom: 5px;
 }
 
 #cart ul li img {
@@ -891,6 +887,18 @@ input#searchBar {
         margin: 0;
     }
 
+    
+
+    .without_cart {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            max-width: 100vw;
+            width: 100%;
+            margin: 0;
+    }
+
     main div h2 {
         max-width: 90vw;;
         margin: 1em auto;
@@ -906,7 +914,6 @@ input#searchBar {
     }
 
     div#products div.watch {
-        width: fit-content;
         min-width: 250px;
     }
     
@@ -921,6 +928,7 @@ input#searchBar {
         justify-content: flex-end;
         align-items: center;
         width: 100px;
+        height: 20px;
     }
 
     #nav_logo * {
@@ -930,11 +938,17 @@ input#searchBar {
 
     #nav_logo #cart_logo {
         margin-bottom: 5px;
+        height: 20px;
     }
+    
+    .logo {
+        height: 20px;
+        margin: 5px 10px;
+      }
 
     #nav_logo span {
         position: absolute;
-        padding: 5px 5px;
+        padding: 2px 6px;
         top: -10px;
         right: -10px;
         width: 5px;
