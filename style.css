@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 html , body {
     margin: 0;
     padding: 0;
@@ -688,15 +686,6 @@ div#cart {
   div#products div.watch div {
     flex-direction: column;
 }
-
-/* div#products {
-    max-height: 65vh;
-    overflow-y: scroll;
-}
-
-#cart {
-    max-height: 55vh;
-} */
 
 h1{
     font-size: 3.5em;
